@@ -27,7 +27,7 @@ body {
 }
 
 .inner {
-  max-width: 1200px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -52,11 +52,16 @@ p {
   padding: 0;
 }
 
+img {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
 /* * * * * * * * *
 *	ヘッダー
 * * * * * * * * */
 header {
-  background: pink;
   width: 100%;
   height: 700px;
   background-size: cover;
@@ -91,7 +96,7 @@ header .inner .nav h1 img {
 }
 
 .nav_li ul li {
-  margin-right: 46px;
+  margin-right: 36px;
 }
 
 .nav_li ul li a {
@@ -103,10 +108,10 @@ header .inner .nav h1 img {
 }
 
 /* * * * * * * * *
-*	main aboutus
+*	main about_us
 * * * * * * * * */
 #aboutus {
-  margin-top: 100px;
+  margin-top: 152px;
 }
 
 #aboutus h2 {
@@ -120,8 +125,6 @@ header .inner .nav h1 img {
 }
 
 #aboutus_a {
-  margin-top: 70px;
-  margin-bottom: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,33 +136,43 @@ header .inner .nav h1 img {
           align-items: center;
 }
 
-#aboutus_a img {
-  width: 365px;
-  height: 365px;
-}
-
-#aboutus_a #ap {
-  margin-left: 20px;
-  font-size: 4rem;
-  font-weight: bold;
-  line-height: 1.55;
-  letter-spacing: 2rem;
+#aboutus_a #aboutus_img img {
+  width: 260px;
+  height: 340px;
+  margin-right: 15px;
 }
 
 #aboutus_a #aboutus_b {
   text-align: center;
 }
 
-#aboutus_a #aboutus_b img {
-  width: 190px;
-  height: 70px;
+#aboutus_a #aboutus_b #ap {
+  margin-top: -110px;
+  font-size: 3.3rem;
+  font-weight: bold;
+  line-height: 1.8;
+  letter-spacing: 1.7rem;
 }
 
 #aboutus_a #aboutus_b p {
-  margin-top: 82px;
+  margin-top: 111px;
   width: 463px;
-  height: 152px;
   font-size: 1.6rem;
   background: #fff;
+}
+
+#ai-1 {
+  margin-top: 118px;
+}
+
+#ai-2 {
+  margin-top: -20px;
+}
+
+/* * * * * * * * *
+*	main news
+* * * * * * * * */
+#news {
+  margin-top: 100px;
 }
 /*# sourceMappingURL=style.css.map */
