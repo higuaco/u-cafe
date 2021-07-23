@@ -50,6 +50,7 @@ img {
   margin: 0;
   padding: 0;
   vertical-align: top;
+  max-width: 100%;
 }
 .sub_t {
   font-size: 2rem;
@@ -102,7 +103,7 @@ $u-litegreen: #bfcdcc;
 }
 
 .btn-3 a:hover::after {
-  transform: translateX(3px);
+  transform: translateX(5px);
 }
 
 /*	btn-4 白から黒
@@ -138,4 +139,59 @@ $u-litegreen: #bfcdcc;
 .btn-4 a:hover::after {
   border-top: 3px solid #fff;
   border-right: 3px solid #fff;
+}
+
+/*	btn-5 main_contact 共通
+-------------------------------*/
+.btn-5 a {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 8em 8em;
+  width: 1080px;
+  color: #000;
+  // font-size: 5rem;
+  // font-weight: 700;
+  // background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+  border: 10px solid #000;
+  margin-top: -70px;
+  margin-bottom: 100px;
+}
+.btn-5 h3 {
+  font-size: 4.5rem;
+  padding-right: 40px;
+}
+.btn-5 .con_2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.con_1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.btn-5 a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -120px;
+  transform: translateY(-50%);
+  width: 240px;
+  height: 3px;
+  background-color: #000;
+  transition: 0.3s;
+}
+
+.btn-5 a:hover {
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-5 a:hover::after {
+  // transform: translateX(3px);
+  transition: all .5s;
+  text-decoration: none;
+  background-color: #fff;
 }

@@ -65,6 +65,7 @@ img {
   margin: 0;
   padding: 0;
   vertical-align: top;
+  max-width: 100%;
 }
 
 .sub_t {
@@ -111,8 +112,8 @@ img {
 }
 
 .btn-3 a:hover::after {
-  -webkit-transform: translateX(3px);
-          transform: translateX(3px);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 /*	btn-4 白から黒
@@ -156,12 +157,77 @@ img {
   border-right: 3px solid #fff;
 }
 
+/*	btn-5 main_contact 共通
+-------------------------------*/
+.btn-5 a {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 8em 8em;
+  width: 1080px;
+  color: #000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 10px solid #000;
+  margin-top: -70px;
+  margin-bottom: 100px;
+}
+
+.btn-5 h3 {
+  font-size: 4.5rem;
+  padding-right: 40px;
+}
+
+.btn-5 .con_2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.con_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn-5 a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -120px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 240px;
+  height: 3px;
+  background-color: #000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn-5 a:hover {
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-5 a:hover::after {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  text-decoration: none;
+  background-color: #fff;
+}
+
 /* * * * * * * * *
 *	ヘッダー
 * * * * * * * * */
 header {
   width: 100%;
-  height: 700px;
+  height: 900px;
   background-size: cover;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/kari/header.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/kari/header.jpg);
@@ -207,6 +273,10 @@ header .inner .nav h1 img {
   color: white;
 }
 
+.nav_li ul li a:hover {
+  color: #000;
+}
+
 .nav_li ul li a img {
   width: 20px;
 }
@@ -215,7 +285,7 @@ header .inner .nav h1 img {
 *	main about_us
 * * * * * * * * */
 #aboutus {
-  margin-top: 152px;
+  margin-top: 90px;
 }
 
 #aboutus h2 {
@@ -435,5 +505,62 @@ header .inner .nav h1 img {
 #access img {
   width: 400px;
   margin: 200px 0 0 120px;
+}
+
+/* * * * * * * * *
+*	main contact 共通
+* * * * * * * * */
+.main_contact {
+  text-align: center;
+}
+
+.main_con_i {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.main_con_p {
+  letter-spacing: .8rem;
+  font-size: 2rem;
+  margin-bottom: 100px;
+}
+
+.main_con_i_1 {
+  width: 960px;
+  height: 553px;
+  background-image: url(../img/kari/coffee.jpg);
+  background-size: cover;
+  background-position: center bottom 23%;
+  float: left;
+}
+
+.main_con_i_2 {
+  width: 960px;
+  height: 553px;
+  background-image: url(../img/kari/cakea.jpg);
+  background-size: cover;
+  background-position: center bottom 30%;
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.con_3 {
+  width: 350px;
+}
+
+.con_4 {
+  border-top: 3px solid #000;
+}
+
+/* * * * * * * * *
+*	footer
+* * * * * * * * */
+footer {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=style.css.map */

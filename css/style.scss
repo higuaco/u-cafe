@@ -6,7 +6,7 @@
 * * * * * * * * */
 header {
   width: 100%;
-  height: 700px;
+  height: 900px;
   background-size: cover;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/kari/header.jpg);
   .inner {
@@ -32,7 +32,10 @@ header {
     li {
       margin-right: 30px;
       a {
-      color: rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+        &:hover {
+          color: #000;
+        }
         img {
           width: 20px;
         }
@@ -44,7 +47,7 @@ header {
 *	main about_us
 * * * * * * * * */
 #aboutus {
-  margin-top: 152px;
+  margin-top: 90px;
   h2 {
     margin-bottom: 20px;
   }
@@ -213,4 +216,52 @@ header {
     width: 400px;
     margin: 200px 0 0 120px;
   }
+}
+/* * * * * * * * *
+*	main contact 共通
+* * * * * * * * */
+.main_contact {
+  text-align: center;
+}
+.main_con_i {
+  width: 150px;
+  margin-bottom: 15px;
+}
+.main_con_p {
+  letter-spacing: .8rem;
+  font-size: 2rem;
+  margin-bottom: 100px;
+}
+.main_con_i_1 {
+  width: 960px;
+  height: 553px;
+  background-image: url(../img/kari/coffee.jpg);
+  background-size: cover;
+  background-position : center bottom 23%;
+  float: left;
+}
+.main_con_i_2 {
+  width: 960px;
+  height: 553px;
+  background-image: url(../img/kari/cakea.jpg);
+  background-size: cover;
+  background-position : center bottom 30%;
+  float: left;
+}
+.clear {
+  clear: both;
+}
+.con_3{
+  width: 350px;
+}
+.con_4 {
+  border-top: 3px solid #000;
+}
+/* * * * * * * * *
+*	footer
+* * * * * * * * */
+footer {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 1.4rem;
 }
