@@ -70,6 +70,7 @@ img {
 .sub_t {
   font-size: 2rem;
   letter-spacing: 1.2rem;
+  margin-bottom: 70px;
 }
 
 /* * * * * * * * *
@@ -383,5 +384,56 @@ header .inner .nav h1 img {
 
 #online_s #onl_p #onl_pp p {
   margin-bottom: 40px;
+}
+
+/* * * * * * * * *
+*	main access
+* * * * * * * * */
+#access {
+  margin-bottom: 200px;
+  line-height: 2.3;
+  font-size: 1.6rem;
+}
+
+#access #acc_a {
+  display: inline-block;
+  width: 540px;
+}
+
+#access #acc_a #a_p2 {
+  margin-top: 13px;
+}
+
+#access #acc_a #a_p2 #a_pa {
+  text-decoration: underline;
+  color: #648181;
+}
+
+#access #acc_a #a_p2 #a_pa:hover {
+  color: #bfcdcc;
+}
+
+#access #acc_a #a_p3 {
+  margin-top: 35px;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+#access #acc_a a {
+  text-decoration: underline;
+  color: #648181;
+}
+
+#access #acc_a a:hover {
+  color: #bfcdcc;
+}
+
+#access #acc_a ul li span {
+  font-weight: bold;
+}
+
+#access img {
+  width: 400px;
+  margin: 200px 0 0 120px;
 }
 /*# sourceMappingURL=style.css.map */

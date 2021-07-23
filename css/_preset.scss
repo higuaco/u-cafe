@@ -54,11 +54,14 @@ img {
 .sub_t {
   font-size: 2rem;
   letter-spacing: 1.2rem;
+  margin-bottom: 70px;
 }
 /* * * * * * * * *
 *	Sass 定義
 * * * * * * * * */
 $ucafe-color: #F5F8F6;
+$u-green: #648181;
+$u-litegreen: #bfcdcc;
 
 @mixin btn-1 { //READ MORE etc
   padding: 15px 45px;
