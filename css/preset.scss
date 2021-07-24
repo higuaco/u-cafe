@@ -48,7 +48,7 @@ img {
 .sub_t {
   font-size: 2rem;
   letter-spacing: 1.2rem;
-  margin-bottom: 130px;
+  margin-bottom: 80px;
 }
 
 /* * * * * * * * *
@@ -73,7 +73,7 @@ header {
   align-items: center;
   ul {
     font-size: 1.3rem;
-    font-weight: bold;
+    // font-weight: bold;
     display: flex;
     li {
       position: relative;
@@ -348,4 +348,40 @@ footer {
 }
 .jc-c {
   justify-content: center;
+}
+.jc-sa {
+  justify-content: space-around;
+}
+.ta-c {
+  text-align: center;
+}
+.text_a {
+  // width: 800px;
+  font-size: 1.6rem;
+  line-height: 3.5;
+}
+/* * * * * * * * *
+*	border bdr-1
+* * * * * * * * */
+.bdr-1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 26px;
+	text-align: center;
+}
+
+.bdr-1::before,
+.bdr-1::after {
+	content: '';
+	width: 300px;
+	height: 1px;
+	background-color: #e3bf00;
+}
+
+.bdr-1::before {
+	margin-right: 50px;
+}
+.bdr-1::after {
+	margin-left: 50px;
 }

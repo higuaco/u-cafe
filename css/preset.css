@@ -64,7 +64,7 @@ img {
 .sub_t {
   font-size: 2rem;
   letter-spacing: 1.2rem;
-  margin-bottom: 130px;
+  margin-bottom: 80px;
 }
 
 /* * * * * * * * *
@@ -96,7 +96,6 @@ header .inner .nav h1 img {
 
 .nav_li ul {
   font-size: 1.3rem;
-  font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,19 +242,19 @@ footer {
   margin: 0 auto;
   padding: 1em 2em;
   width: 300px;
-  color: #665957;
+  color: #36374b;
   font-size: 18px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  border: 4px solid #665957;
+  border: 4px solid #36374b;
 }
 
 .btn-4 a::after {
   content: '';
   width: 5px;
   height: 5px;
-  border-top: 3px solid #665957;
-  border-right: 3px solid #665957;
+  border-top: 3px solid #36374b;
+  border-right: 3px solid #36374b;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -263,7 +262,7 @@ footer {
 .btn-4 a:hover {
   color: #fff;
   text-decoration: none;
-  background-color: #665957;
+  background-color: #36374b;
 }
 
 .btn-4 a:hover::after {
@@ -279,10 +278,10 @@ footer {
   margin: 0 auto;
   padding: 8em 8em;
   width: 1080px;
-  color: #333;
+  color: #36374b;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  border: 10px solid #333;
+  border: 10px solid #36374b;
   margin-top: -70px;
   margin-bottom: 100px;
 }
@@ -318,14 +317,14 @@ footer {
           transform: translateY(-50%);
   width: 240px;
   height: 3px;
-  background-color: #333;
+  background-color: #36374b;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .btn-5 a:hover {
   text-decoration: none;
-  background-color: #333;
+  background-color: #36374b;
   color: #fff;
 }
 
@@ -431,5 +430,52 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.jc-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.text_a {
+  font-size: 1.6rem;
+  line-height: 3.5;
+}
+
+/* * * * * * * * *
+*	border bdr-1
+* * * * * * * * */
+.bdr-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 26px;
+  text-align: center;
+}
+
+.bdr-1::before,
+.bdr-1::after {
+  content: '';
+  width: 300px;
+  height: 1px;
+  background-color: #e3bf00;
+}
+
+.bdr-1::before {
+  margin-right: 50px;
+}
+
+.bdr-1::after {
+  margin-left: 50px;
 }
 /*# sourceMappingURL=preset.css.map */

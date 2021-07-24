@@ -254,4 +254,30 @@
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/kari/shop1.jpg);
   background-size: cover;
 }
+
+#shop_inner h2 {
+  margin-top: 130px;
+}
+
+#shop_inner .shop-ti {
+  margin-top: 150px;
+  margin-bottom: 80px;
+  font-size: 2rem;
+}
+
+#shop_inner .shop-items .sp-item img {
+  width: 460px;
+  height: 460px;
+  margin-bottom: 30px;
+}
+
+#shop_inner .shop-items .sp-item .sp-item-ti {
+  font-size: 1.7em;
+}
+
+#shop_inner .shop-items .sp-item .sp-item-ti-2 {
+  margin-top: 10px;
+  font-size: 1.4em;
+  color: #b4b4b4;
+}
 /*# sourceMappingURL=style.css.map */
