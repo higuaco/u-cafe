@@ -2,57 +2,16 @@
 @import "preset";
 
 /* * * * * * * * *
-*	ヘッダー
+*	header
 * * * * * * * * */
-header {
+
+//header background image あり
+.head-img {
   width: 100%;
   height: 900px;
   background-size: cover;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/kari/header.jpg);
-  .inner {
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 105px;
-      h1 img {
-        width: 180px;
-        height: 60px;
-      }
-    }
-  }
 }
-// ヘッダーナビ
-.nav_li {
-  align-items: center;
-  ul {
-    font-size: 1.3rem;
-    font-weight: bold;
-    display: flex;
-    li {
-      position: relative;
-      margin-right: 30px;
-      a {
-        color: rgb(255, 255, 255);
-        transition: 0.3s;
-        img {
-          width: 20px;
-        }
-      }
-    }
-  }
-}
-.insta_hov {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: 0.3s;
-  &:hover {
-    opacity: 1;
-  }
-}
-
 /* * * * * * * * *
 *	main about_us
 * * * * * * * * */
@@ -182,9 +141,7 @@ header {
 /* * * * * * * * *
 *	main access
 * * * * * * * * */
-.inner{
-  // background-color: pink;
-}
+
 #access {
   margin-bottom: 200px;
   line-height: 2.3;
@@ -224,51 +181,10 @@ header {
     margin: 200px 0 0 120px;
   }
 }
+
+/*   photo
+--------------------------------------------------------------------------*/
+
 /* * * * * * * * *
-*	main contact 共通
+*	photo
 * * * * * * * * */
-.main_contact {
-  text-align: center;
-}
-.main_con_i {
-  width: 150px;
-  margin-bottom: 15px;
-}
-.main_con_p {
-  letter-spacing: .8rem;
-  font-size: 2rem;
-  margin-bottom: 100px;
-}
-.main_con_i_1 {
-  width: 960px;
-  height: 553px;
-  background-image: url(../img/kari/coffee.jpg);
-  background-size: cover;
-  background-position : center bottom 23%;
-  float: left;
-}
-.main_con_i_2 {
-  width: 960px;
-  height: 553px;
-  background-image: url(../img/kari/cakea.jpg);
-  background-size: cover;
-  background-position : center bottom 30%;
-  float: left;
-}
-.clear {
-  clear: both;
-}
-.con_3{
-  width: 280px;
-}
-.con_4 {
-  border-top: 3px solid #000;
-}
-/* * * * * * * * *
-*	footer
-* * * * * * * * */
-footer {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 1.4rem;
-}

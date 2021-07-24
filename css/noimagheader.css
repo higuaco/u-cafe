@@ -3,116 +3,142 @@
 *	base
 * * * * * * * * */
 *, *::before, *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-html { font-size: 62.5%; }
-img { max-width: 100%; }
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
 body {
   color: #333;
-  font-family:'PT Sans Caption','PT Sans','ヒラギノ角ゴ Pro W3',' Hiragino Kaku Gothic Pro', 'MeiryoUI', 'MSUIGothic', 'メイリオ', 'Meiryo', 'ＭＳＰゴシック', sans-serif;
+  font-family: 'PT Sans Caption','PT Sans','ヒラギノ角ゴ Pro W3',' Hiragino Kaku Gothic Pro', 'MeiryoUI', 'MSUIGothic', 'メイリオ', 'Meiryo', 'ＭＳＰゴシック', sans-serif;
   line-height: 1.8;
   letter-spacing: 0.5rem;
   margin: 0;
 }
+
 .container {
   max-width: 1920px;
   margin: 0 auto;
 }
+
 .inner {
   max-width: 1080px;
   margin: 0 auto;
-  // background: skyblue;
 }
+
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   cursor: pointer;
   color: #333;
 }
+
 h2 {
   font-size: 4.5rem;
   margin-bottom: 30px;
 }
+
 /* * * * * * * * *
 *	reset
 * * * * * * * * */
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
+
 p {
   margin: 0;
   padding: 0;
 }
+
 img {
   margin: 0;
   padding: 0;
   vertical-align: top;
   max-width: 100%;
 }
+
 .sub_t {
   font-size: 2rem;
   letter-spacing: 1.2rem;
   margin-bottom: 70px;
 }
+
 /* * * * * * * * *
 *	Sass 定義
 * * * * * * * * */
-$ucafe-color: #F5F8F6;
-$u-green: #648181;
-$u-litegreen: #bfcdcc;
-
-
 /* * * * * * * * *
 *	header
 * * * * * * * * */
-header {
-  .inner {
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 105px;
-      h1 img {
-        width: 180px;
-        height: 60px;
-      }
-    }
-  }
+header .inner .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 105px;
 }
-// nav
+
+header .inner .nav h1 img {
+  width: 180px;
+  height: 60px;
+}
+
 .nav_li {
-  align-items: center;
-  ul {
-    font-size: 1.3rem;
-    font-weight: bold;
-    display: flex;
-    li {
-      position: relative;
-      margin-right: 30px;
-      a {
-        color: rgb(255, 255, 255);
-        transition: 0.3s;
-        img {
-          width: 20px;
-        }
-      }
-    }
-  }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
+.nav_li ul {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav_li ul li {
+  position: relative;
+  margin-right: 30px;
+}
+
+.nav_li ul li a {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav_li ul li a img {
+  width: 20px;
+}
+
 .insta_hov {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
-  &:hover {
-    opacity: 1;
-  }
 }
 
+.insta_hov:hover {
+  opacity: 1;
+}
 
 /* * * * * * * * *
 *	footer
@@ -120,40 +146,48 @@ header {
 .main_contact {
   text-align: center;
 }
+
 .main_con_i {
   width: 150px;
   margin-bottom: 15px;
 }
+
 .main_con_p {
   letter-spacing: .8rem;
   font-size: 2rem;
   margin-bottom: 100px;
 }
+
 .main_con_i_1 {
   width: 960px;
   height: 553px;
   background-image: url(../img/kari/coffee.jpg);
   background-size: cover;
-  background-position : center bottom 23%;
+  background-position: center bottom 23%;
   float: left;
 }
+
 .main_con_i_2 {
   width: 960px;
   height: 553px;
   background-image: url(../img/kari/cakea.jpg);
   background-size: cover;
-  background-position : center bottom 30%;
+  background-position: center bottom 30%;
   float: left;
 }
+
 .clear {
   clear: both;
 }
-.con_3{
+
+.con_3 {
   width: 280px;
 }
+
 .con_4 {
   border-top: 3px solid #000;
 }
+
 /* * * * * * * * *
 *	footer
 * * * * * * * * */
@@ -163,11 +197,9 @@ footer {
   font-size: 1.4rem;
 }
 
-
 /* * * * * * * * *
 *	共通事項
 * * * * * * * * */
-
 /*	button 右に横棒がついているもの
 -------------------------------*/
 .btn-3 a {
@@ -178,8 +210,8 @@ footer {
   width: 300px;
   color: #333;
   font-size: 1.6rem;
-  // font-weight: 700;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -188,10 +220,12 @@ footer {
   position: absolute;
   top: 50%;
   right: -35px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 70px;
   height: 2px;
   background-color: #2285b1;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -201,21 +235,28 @@ footer {
 }
 
 .btn-3 a:hover::after {
-  transform: translateX(5px);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 /*	btn-4 白から黒
 -------------------------------*/
 .btn-4 a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
   padding: 1em 2em;
   width: 300px;
   color: #000000;
   font-size: 18px;
-  // font-weight: 700;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   border: 4px solid #000000;
 }
@@ -226,7 +267,8 @@ footer {
   height: 5px;
   border-top: 3px solid #333;
   border-right: 3px solid #333;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .btn-4 a:hover {
@@ -249,36 +291,46 @@ footer {
   padding: 8em 8em;
   width: 1080px;
   color: #000;
-  // font-size: 5rem;
-  // font-weight: 700;
-  // background-color: rgb(255, 255, 255);
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   border: 10px solid #000;
   margin-top: -70px;
   margin-bottom: 100px;
 }
+
 .btn-5 h3 {
   font-size: 4.5rem;
   padding-right: 40px;
 }
+
 .btn-5 .con_2 {
   font-size: 2rem;
   font-weight: bold;
 }
+
 .con_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .btn-5 a::after {
   content: '';
   position: absolute;
   top: 50%;
   right: -120px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 240px;
   height: 3px;
   background-color: #000;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -289,7 +341,7 @@ footer {
 }
 
 .btn-5 a:hover::after {
-  // transform: translateX(3px);
+  -webkit-transition: all .5s;
   transition: all .5s;
   text-decoration: none;
   background-color: #fff;
@@ -298,31 +350,91 @@ footer {
 /* * * * * * * * *
 *	hover
 * * * * * * * * */
-
 /*	画像
 -------------------------------*/
 .hov {
-	opacity: 1;
-	transition: opacity 200ms ease-out;
-	&:hover {
-		opacity: .55;
-		text-decoration: none;
-	}
+  opacity: 1;
+  -webkit-transition: opacity 200ms ease-out;
+  transition: opacity 200ms ease-out;
+}
+
+.hov:hover {
+  opacity: .55;
+  text-decoration: none;
 }
 
 /*	nav white -> black
 -------------------------------*/
 .hov_nav_w {
-	opacity: 1;
-	transition: opacity 0.5s ease-out;
-	&:hover {
-		// opacity: .55;
-    color: #000;
-		text-decoration: none;
-	}
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
+
+.hov_nav_w:hover {
+  color: #000;
+  text-decoration: none;
+}
+
 /*	transition 0.3s
 -------------------------------*/
 .hov_03 {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
+/* * * * * * * * *
+*	ヘッダー
+* * * * * * * * */
+header {
+  width: 100%;
+  height: 900px;
+}
+
+header .inner .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 105px;
+}
+
+header .inner .nav h1 img {
+  width: 180px;
+  height: 60px;
+}
+
+.nav_li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav_li ul {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav_li ul li {
+  position: relative;
+  margin-right: 30px;
+}
+
+.nav_li ul li a {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav_li ul li a img {
+  width: 20px;
+}
+/*# sourceMappingURL=noimagheader.css.map */
