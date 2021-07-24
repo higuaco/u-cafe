@@ -38,7 +38,7 @@ h2 {
 /* * * * * * * * *
 *	reset
 * * * * * * * * */
-h1,h2,h3,h4,h5,h6, {
+h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0;
 }
@@ -64,12 +64,12 @@ $ucafe-color: #F5F8F6;
 $u-green: #648181;
 $u-litegreen: #bfcdcc;
 
-@mixin btn-1 { //READ MORE etc
-  padding: 15px 45px;
-  // display: inline-block;
-  border: solid;
-  font-size: 1.7rem;
-}
+
+
+/* * * * * * * * *
+*	共通事項
+* * * * * * * * */
+
 /*	button
 -------------------------------*/
 .btn-3 a {
@@ -194,4 +194,36 @@ $u-litegreen: #bfcdcc;
   transition: all .5s;
   text-decoration: none;
   background-color: #fff;
+}
+
+/* * * * * * * * *
+*	hover
+* * * * * * * * */
+
+/*	画像
+-------------------------------*/
+.hov {
+	opacity: 1;
+	transition: opacity 200ms ease-out;
+	&:hover {
+		opacity: .55;
+		text-decoration: none;
+	}
+}
+
+/*	nav white -> black
+-------------------------------*/
+.hov_nav_w {
+	opacity: 1;
+	transition: opacity 0.5s ease-out;
+	&:hover {
+		// opacity: .55;
+    color: #000;
+		text-decoration: none;
+	}
+}
+/*	transition 0.5s
+-------------------------------*/
+.hov_05 {
+  transition: 0.5s;
 }

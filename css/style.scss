@@ -30,12 +30,11 @@ header {
     font-weight: bold;
     display: flex;
     li {
+      position: relative;
       margin-right: 30px;
       a {
         color: rgb(255, 255, 255);
-        &:hover {
-          color: #000;
-        }
+        transition: 0.5s;
         img {
           width: 20px;
         }
@@ -43,6 +42,17 @@ header {
     }
   }
 }
+.insta_hov {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.5s;
+  &:hover {
+    opacity: 1;
+  }
+}
+
 /* * * * * * * * *
 *	main about_us
 * * * * * * * * */
@@ -106,9 +116,6 @@ header {
       }
     }
   }
-}
-.btn-1 {
-  @include btn-1;
 }
 .tandb {
   display: flex;
@@ -252,7 +259,7 @@ header {
   clear: both;
 }
 .con_3{
-  width: 350px;
+  width: 280px;
 }
 .con_4 {
   border-top: 3px solid #000;

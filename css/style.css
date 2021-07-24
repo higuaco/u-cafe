@@ -77,6 +77,9 @@ img {
 /* * * * * * * * *
 *	Sass 定義
 * * * * * * * * */
+/* * * * * * * * *
+*	共通事項
+* * * * * * * * */
 /*	button
 -------------------------------*/
 .btn-3 a {
@@ -223,6 +226,42 @@ img {
 }
 
 /* * * * * * * * *
+*	hover
+* * * * * * * * */
+/*	画像
+-------------------------------*/
+.hov {
+  opacity: 1;
+  -webkit-transition: opacity 200ms ease-out;
+  transition: opacity 200ms ease-out;
+}
+
+.hov:hover {
+  opacity: .55;
+  text-decoration: none;
+}
+
+/*	nav white -> black
+-------------------------------*/
+.hov_nav_w {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+
+.hov_nav_w:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/*	transition 0.5s
+-------------------------------*/
+.hov_05 {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* * * * * * * * *
 *	ヘッダー
 * * * * * * * * */
 header {
@@ -266,19 +305,31 @@ header .inner .nav h1 img {
 }
 
 .nav_li ul li {
+  position: relative;
   margin-right: 30px;
 }
 
 .nav_li ul li a {
   color: white;
-}
-
-.nav_li ul li a:hover {
-  color: #000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .nav_li ul li a img {
   width: 20px;
+}
+
+.insta_hov {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.insta_hov:hover {
+  opacity: 1;
 }
 
 /* * * * * * * * *
@@ -359,12 +410,6 @@ header .inner .nav h1 img {
 #news #news_a p span {
   font-weight: bold;
   margin-right: 35px;
-}
-
-.btn-1 {
-  padding: 15px 45px;
-  border: solid;
-  font-size: 1.7rem;
 }
 
 .tandb {
@@ -548,7 +593,7 @@ header .inner .nav h1 img {
 }
 
 .con_3 {
-  width: 350px;
+  width: 280px;
 }
 
 .con_4 {
