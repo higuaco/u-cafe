@@ -1,16 +1,17 @@
 @charset "UTF-8";
-@import "preset";
+@import "variables";
+
 
 /* * * * * * * * *
 *	header
 * * * * * * * * */
 
-//header background image あり
-.head-img {
+//header background image **index**
+.head-bg-img {
   width: 100%;
   height: 900px;
+  background: linear-gradient(rgba(53, 37, 37, 0.2), rgba(0, 0, 0, 0.2)), url(../img/kari/header.jpg);
   background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/kari/header.jpg);
 }
 /* * * * * * * * *
 *	main about_us
@@ -188,3 +189,21 @@
 /* * * * * * * * *
 *	photo
 * * * * * * * * */
+#photo_inner {
+  img {
+    margin-bottom: 100px;
+  }
+}
+/*   shop top
+--------------------------------------------------------------------------*/
+/* * * * * * * * *
+*	shop top
+* * * * * * * * */
+
+.head-bg-img-shop {
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/kari/shop1.jpg);
+  background-size: cover;
+
+}

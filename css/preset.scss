@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "variables";
 /* * * * * * * * *
 *	base
 * * * * * * * * */
@@ -21,7 +22,6 @@ body {
 .inner {
   max-width: 1080px;
   margin: 0 auto;
-  // background: skyblue;
 }
 ul {
   list-style: none;
@@ -33,19 +33,12 @@ a {
 }
 h2 {
   font-size: 4.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
+
 /* * * * * * * * *
 *	reset
 * * * * * * * * */
-h1,h2,h3,h4,h5,h6 {
-  margin: 0;
-  padding: 0;
-}
-p {
-  margin: 0;
-  padding: 0;
-}
 img {
   margin: 0;
   padding: 0;
@@ -55,15 +48,8 @@ img {
 .sub_t {
   font-size: 2rem;
   letter-spacing: 1.2rem;
-  margin-bottom: 70px;
+  margin-bottom: 130px;
 }
-/* * * * * * * * *
-*	Sass 定義
-* * * * * * * * */
-$ucafe-color: #F5F8F6;
-$u-green: #648181;
-$u-litegreen: #bfcdcc;
-
 
 /* * * * * * * * *
 *	header
@@ -92,13 +78,9 @@ header {
     li {
       position: relative;
       margin-right: 30px;
-      a {
-        color: rgb(255, 255, 255);
-        transition: 0.3s;
         img {
           width: 20px;
         }
-      }
     }
   }
 }
@@ -112,7 +94,11 @@ header {
     opacity: 1;
   }
 }
-
+// navの下線
+.nav-border {
+  border-bottom: solid 1px #000;
+  margin-bottom: 150px;
+}
 
 /* * * * * * * * *
 *	footer
@@ -213,26 +199,26 @@ footer {
   margin: 0 auto;
   padding: 1em 2em;
   width: 300px;
-  color: #000000;
+  color: $btn4-1;
   font-size: 18px;
   // font-weight: 700;
   transition: 0.3s;
-  border: 4px solid #000000;
+  border: 4px solid $btn4-1;
 }
 
 .btn-4 a::after {
   content: '';
   width: 5px;
   height: 5px;
-  border-top: 3px solid #333;
-  border-right: 3px solid #333;
+  border-top: 3px solid $btn4-1;
+  border-right: 3px solid $btn4-1;
   transform: rotate(45deg);
 }
 
 .btn-4 a:hover {
   color: #fff;
   text-decoration: none;
-  background-color: #333;
+  background-color: $btn4-1;
 }
 
 .btn-4 a:hover::after {
@@ -240,7 +226,7 @@ footer {
   border-right: 3px solid #fff;
 }
 
-/*	btn-5 main_contact 共通
+/*	btn-5 footer 共通
 -------------------------------*/
 .btn-5 a {
   display: block;
@@ -248,12 +234,9 @@ footer {
   margin: 0 auto;
   padding: 8em 8em;
   width: 1080px;
-  color: #000;
-  // font-size: 5rem;
-  // font-weight: 700;
-  // background-color: rgb(255, 255, 255);
+  color: $ftr-1;
   transition: 0.3s;
-  border: 10px solid #000;
+  border: 10px solid $ftr-1;
   margin-top: -70px;
   margin-bottom: 100px;
 }
@@ -278,13 +261,13 @@ footer {
   transform: translateY(-50%);
   width: 240px;
   height: 3px;
-  background-color: #000;
+  background-color: $ftr-1;
   transition: 0.3s;
 }
 
 .btn-5 a:hover {
   text-decoration: none;
-  background-color: #000;
+  background-color: $ftr-1;
   color: #fff;
 }
 
@@ -313,16 +296,56 @@ footer {
 /*	nav white -> black
 -------------------------------*/
 .hov_nav_w {
-	opacity: 1;
-	transition: opacity 0.5s ease-out;
+  color: #fff;
+  transition: 0.3s;
 	&:hover {
-		// opacity: .55;
     color: #000;
 		text-decoration: none;
 	}
 }
+/*	nav black -> white
+-------------------------------*/
+
+.hov_nav_b {
+  color: #000;
+  transition: 0.3s;
+	&:hover {
+    color:$u-litegreen;
+		text-decoration: none;
+	}
+}
+
 /*	transition 0.3s
 -------------------------------*/
 .hov_03 {
   transition: 0.3s;
+}
+/* * * * * * * * *
+*	その他共通
+* * * * * * * * */
+.cen {
+  text-align: center;
+}
+.photo_t {
+  width: 500px;
+  height: 617px;
+}
+.photo_y {
+  width: 500px;
+  height: 334px;
+}
+.d-f {
+  display: flex;
+}
+.js-sb {
+  justify-content: space-between;
+}
+.ai-c {
+  align-items: center;
+}
+.fd-c {
+  flex-direction: column;
+}
+.jc-c {
+  justify-content: center;
 }

@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* * * * * * * * *
+*	Sass 定義
+* * * * * * * * */
+/* * * * * * * * *
 *	base
 * * * * * * * * */
 *, *::before, *::after {
@@ -45,22 +48,12 @@ a {
 
 h2 {
   font-size: 4.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* * * * * * * * *
 *	reset
 * * * * * * * * */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
 img {
   margin: 0;
   padding: 0;
@@ -71,12 +64,9 @@ img {
 .sub_t {
   font-size: 2rem;
   letter-spacing: 1.2rem;
-  margin-bottom: 70px;
+  margin-bottom: 130px;
 }
 
-/* * * * * * * * *
-*	Sass 定義
-* * * * * * * * */
 /* * * * * * * * *
 *	header
 * * * * * * * * */
@@ -117,13 +107,7 @@ header .inner .nav h1 img {
   margin-right: 30px;
 }
 
-.nav_li ul li a {
-  color: white;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.nav_li ul li a img {
+.nav_li ul li img {
   width: 20px;
 }
 
@@ -138,6 +122,11 @@ header .inner .nav h1 img {
 
 .insta_hov:hover {
   opacity: 1;
+}
+
+.nav-border {
+  border-bottom: solid 1px #000;
+  margin-bottom: 150px;
 }
 
 /* * * * * * * * *
@@ -254,19 +243,19 @@ footer {
   margin: 0 auto;
   padding: 1em 2em;
   width: 300px;
-  color: #000000;
+  color: #665957;
   font-size: 18px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  border: 4px solid #000000;
+  border: 4px solid #665957;
 }
 
 .btn-4 a::after {
   content: '';
   width: 5px;
   height: 5px;
-  border-top: 3px solid #333;
-  border-right: 3px solid #333;
+  border-top: 3px solid #665957;
+  border-right: 3px solid #665957;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -274,7 +263,7 @@ footer {
 .btn-4 a:hover {
   color: #fff;
   text-decoration: none;
-  background-color: #333;
+  background-color: #665957;
 }
 
 .btn-4 a:hover::after {
@@ -282,7 +271,7 @@ footer {
   border-right: 3px solid #fff;
 }
 
-/*	btn-5 main_contact 共通
+/*	btn-5 footer 共通
 -------------------------------*/
 .btn-5 a {
   display: block;
@@ -290,10 +279,10 @@ footer {
   margin: 0 auto;
   padding: 8em 8em;
   width: 1080px;
-  color: #000;
+  color: #333;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  border: 10px solid #000;
+  border: 10px solid #333;
   margin-top: -70px;
   margin-bottom: 100px;
 }
@@ -329,14 +318,14 @@ footer {
           transform: translateY(-50%);
   width: 240px;
   height: 3px;
-  background-color: #000;
+  background-color: #333;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .btn-5 a:hover {
   text-decoration: none;
-  background-color: #000;
+  background-color: #333;
   color: #fff;
 }
 
@@ -366,13 +355,26 @@ footer {
 /*	nav white -> black
 -------------------------------*/
 .hov_nav_w {
-  opacity: 1;
-  -webkit-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .hov_nav_w:hover {
   color: #000;
+  text-decoration: none;
+}
+
+/*	nav black -> white
+-------------------------------*/
+.hov_nav_b {
+  color: #000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hov_nav_b:hover {
+  color: #bfcdcc;
   text-decoration: none;
 }
 
@@ -384,57 +386,50 @@ footer {
 }
 
 /* * * * * * * * *
-*	ヘッダー
+*	その他共通
 * * * * * * * * */
-header {
-  width: 100%;
-  height: 900px;
+.cen {
+  text-align: center;
 }
 
-header .inner .nav {
+.photo_t {
+  width: 500px;
+  height: 617px;
+}
+
+.photo_y {
+  width: 500px;
+  height: 334px;
+}
+
+.d-f {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.js-sb {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 105px;
 }
 
-header .inner .nav h1 img {
-  width: 180px;
-  height: 60px;
-}
-
-.nav_li {
+.ai-c {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.nav_li ul {
-  font-size: 1.3rem;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.nav_li ul li {
-  position: relative;
-  margin-right: 30px;
+.jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-
-.nav_li ul li a {
-  color: white;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.nav_li ul li a img {
-  width: 20px;
-}
-/*# sourceMappingURL=noimagheader.css.map */
+/*# sourceMappingURL=preset.css.map */
