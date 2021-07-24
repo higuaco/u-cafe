@@ -80,7 +80,7 @@ img {
 /* * * * * * * * *
 *	共通事項
 * * * * * * * * */
-/*	button
+/*	button 右に横棒がついているもの
 -------------------------------*/
 .btn-3 a {
   display: block;
@@ -136,6 +136,8 @@ img {
   width: 300px;
   color: #000000;
   font-size: 18px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border: 4px solid #000000;
 }
 
@@ -254,11 +256,11 @@ img {
   text-decoration: none;
 }
 
-/*	transition 0.5s
+/*	transition 0.3s
 -------------------------------*/
-.hov_05 {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+.hov_03 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 /* * * * * * * * *
@@ -311,8 +313,8 @@ header .inner .nav h1 img {
 
 .nav_li ul li a {
   color: white;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .nav_li ul li a img {
@@ -324,8 +326,8 @@ header .inner .nav h1 img {
   left: 0;
   top: 0;
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .insta_hov:hover {

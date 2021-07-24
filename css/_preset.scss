@@ -70,7 +70,7 @@ $u-litegreen: #bfcdcc;
 *	共通事項
 * * * * * * * * */
 
-/*	button
+/*	button 右に横棒がついているもの
 -------------------------------*/
 .btn-3 a {
   display: block;
@@ -118,6 +118,7 @@ $u-litegreen: #bfcdcc;
   color: #000000;
   font-size: 18px;
   // font-weight: 700;
+  transition: 0.3s;
   border: 4px solid #000000;
 }
 
@@ -222,8 +223,8 @@ $u-litegreen: #bfcdcc;
 		text-decoration: none;
 	}
 }
-/*	transition 0.5s
+/*	transition 0.3s
 -------------------------------*/
-.hov_05 {
-  transition: 0.5s;
+.hov_03 {
+  transition: 0.3s;
 }
