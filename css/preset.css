@@ -11,7 +11,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 50%;
 }
 
 img {
@@ -335,6 +335,94 @@ footer {
   background-color: #fff;
 }
 
+/*	btn-6 shoping CHEESECAKE 他の
+-------------------------------*/
+.btn-6 a {
+  text-align: center;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 500px;
+  color: #fff;
+  font-size: 18px;
+  border: 1px solid #fff;
+  background-color: #8aa2a0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn-6 a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -35px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 70px;
+  height: 2px;
+  background-color: #e5e5e5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn-6 a:hover {
+  text-decoration: none;
+  background-color: #F5F8F6;
+  border: 1px solid #36374b;
+  color: #adabae;
+}
+
+.btn-6 a:hover::after {
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+  background-color: #36374b;
+}
+
+/*	btn-7 shoping 戻る
+-------------------------------*/
+.btn-7 a {
+  text-align: center;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 500px;
+  color: #333;
+  font-size: 18px;
+  border: 1px solid #333;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn-7 a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -35px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 70px;
+  height: 1px;
+  background-color: #36374b;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn-7 a:hover {
+  text-decoration: none;
+  background-color: #36374b;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+.btn-7 a:hover::after {
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+  background-color: #fff;
+}
+
 /* * * * * * * * *
 *	hover
 * * * * * * * * */
@@ -382,6 +470,35 @@ footer {
 .hov_03 {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+/*	画像 マウスオーバー時拡大（明るく）
+-------------------------------*/
+.img-hov-1 {
+  overflow: hidden;
+  /*拡大時にはみ出た部分を隠す*/
+}
+
+.img-hov-1 img, .img-hov-1 p {
+  display: block;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  /*変化に掛かる時間*/
+}
+
+.img-hov-1 img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  /*画像の拡大率*/
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  /*変化に掛かる時間*/
+  opacity: 0.6;
+  /* 小さくするほど暗くなります */
+}
+
+.img-hov-1 img:hover .img-hov-1 p {
+  opacity: 0.6;
 }
 
 /* * * * * * * * *
@@ -447,7 +564,7 @@ footer {
 }
 
 /* * * * * * * * *
-*	border bdr-1
+*	border bdr-1 CHEESECAKE
 * * * * * * * * */
 .bdr-1 {
   display: -webkit-box;
@@ -476,6 +593,39 @@ footer {
 }
 
 .bdr-1::after {
+  margin-left: 50px;
+}
+
+/* * * * * * * * *
+*	border bdr-2 COOKIE
+* * * * * * * * */
+.bdr-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 26px;
+  text-align: center;
+}
+
+.bdr-2::before,
+.bdr-2::after {
+  content: '';
+  width: 280px;
+  height: 1px;
+  background-color: #e3bf00;
+}
+
+.bdr-2::before {
+  margin-right: 50px;
+}
+
+.bdr-2::after {
   margin-left: 50px;
 }
 /*# sourceMappingURL=preset.css.map */
