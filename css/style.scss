@@ -264,13 +264,14 @@ article {
   margin-left: 20px;
 }
 /* * * * * * * * *
-*
+*shoping 詳細ページ
 * * * * * * * * */
 
 .sp-dt-main {
   margin-bottom: 80px;
   margin-top: 100px;
   .sp-dt-sub1 {
+    margin-right: 20px;
     .sp-dt-sub-d1 {
       margin-right: 20px;
       img {
@@ -280,13 +281,14 @@ article {
       }
     }
     .sp-dt-sub-d2 {
-      width: 395px;
-      height: 395px;
+      width: 350px;
+      height: 350px;
       background-color: #333;
     }
   }
   .sp-dt-sub2 {
-    width: 500px;
+    margin-left: 20px;
+    width: 450px;
     .sp-dt-name {
       font-size: 1.8rem;
     }
@@ -304,6 +306,9 @@ article {
     .dt-size {
       .dt-size-ti {
         font-size: 1.6rem;
+      }
+      .dt-size-po {
+        margin-left: 100px;
       }
     }
     .dt-size-dt {
@@ -388,12 +393,23 @@ article {
       }
     }
   }
-  .cart_f {
-    margin-top: 30px;
-  }
-  .cart_g {
-    border: 1px solid #333;
-    width: 600px;
-    height: 220px;
+}
+.cart_f {
+  margin-top: 30px;
+}
+.cart_g {
+  border: 1px solid #333;
+  width: 600px;
+  height: 220px;
+}
+.cart_h {
+  border-bottom: 1px solid #000;
+  width: 300px;
+}
+.cart_i {
+  margin-top: 80px;
+  width: 270px;
+  .ww a {
+    width: 270px;
   }
 }

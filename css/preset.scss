@@ -265,7 +265,7 @@ footer {
 }
 .btn-5 .con_2 {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 .con_1 {
   display: flex;
@@ -294,7 +294,7 @@ footer {
   // transform: translateX(3px);
   transition: all .5s;
   text-decoration: none;
-  background-color: #fff;
+  background-color: #f4f3ef;
 }
 
 /*	btn-6 shoping CHEESECAKE 他の
@@ -305,14 +305,14 @@ footer {
   position: relative;
   margin: 0 auto;
   padding: 1em 2em;
-  width: 500px;
+  width: 380px;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.6rem;
   border: 1px solid #fff;
-  // font-weight: 700;
   background-color: $atr;
   transition: 0.3s;
 }
+
 
 .btn-6 a::after {
   content: '';
@@ -321,7 +321,7 @@ footer {
   right: -35px;
   transform: translateY(-50%);
   width: 70px;
-  height: 2px;
+  height: 1px;
   background-color: #e5e5e5;
   transition: 0.3s;
 }
@@ -345,9 +345,9 @@ footer {
   position: relative;
   margin: 0 auto;
   padding: 1em 2em;
-  width: 500px;
+  width: 380px;
   color: #333;
-  font-size: 18px;
+  font-size: 1.6rem;
   border: 1px solid #333;
   // font-weight: 700;
   background-color: #fff;
@@ -375,7 +375,7 @@ footer {
 
 .btn-7 a:hover::after {
   transform: translateX(3px);
-  background-color: #fff;
+  background-color: #f4f3ef;
 }
 
 /* * * * * * * * *
@@ -506,6 +506,9 @@ footer {
 }
 .ai-c {
   align-items: center;
+}
+.ai-fe {
+  align-items: flex-end;
 }
 .fd-c {
   flex-direction: column;
