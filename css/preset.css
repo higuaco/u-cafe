@@ -22,7 +22,7 @@ body {
   color: #333;
   font-family: 'PT Sans Caption','PT Sans','ヒラギノ角ゴ Pro W3',' Hiragino Kaku Gothic Pro', 'MeiryoUI', 'MSUIGothic', 'メイリオ', 'Meiryo', 'ＭＳＰゴシック', sans-serif;
   line-height: 1.8;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.2rem;
   margin: 0;
 }
 
@@ -34,6 +34,7 @@ body {
 .inner {
   max-width: 1080px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 ul {
@@ -48,7 +49,7 @@ a {
 
 h2 {
   font-size: 4.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* * * * * * * * *
@@ -64,13 +65,22 @@ img {
 .sub_t {
   font-size: 2rem;
   letter-spacing: 1.2rem;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 /* * * * * * * * *
 *	header
 * * * * * * * * */
-header .inner .nav {
+header .header_under {
+  border-bottom: 1px solid #333;
+  height: 90px;
+}
+
+header .header_under_indx {
+  border-bottom: 1px solid #fff;
+}
+
+.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,10 +90,10 @@ header .inner .nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 105px;
+  height: 90px;
 }
 
-header .inner .nav h1 img {
+.nav img {
   width: 180px;
   height: 60px;
 }
@@ -108,6 +118,7 @@ header .inner .nav h1 img {
 
 .nav_li ul li img {
   width: 20px;
+  height: 20px;
 }
 
 .insta_hov {
@@ -123,9 +134,18 @@ header .inner .nav h1 img {
   opacity: 1;
 }
 
-.nav-border {
-  border-bottom: solid 1px #000;
-  margin-bottom: 150px;
+/*	shopping header
+-------------------------------*/
+.shop-ti-big {
+  height: 68px;
+  margin-top: 20px;
+  background-color: #F5F8F6;
+}
+
+.shop-ti-big .shop-ti-big-p {
+  font-size: 2rem;
+  letter-spacing: 1.2rem;
+  font-weight: bold;
 }
 
 /* * * * * * * * *
@@ -146,13 +166,16 @@ header .inner .nav h1 img {
   margin-bottom: 100px;
 }
 
+.main_cons {
+  text-align: center;
+}
+
 .main_con_i_1 {
   width: 960px;
   height: 553px;
   background-image: url(../img/kari/coffee.jpg);
   background-size: cover;
   background-position: center bottom 23%;
-  float: left;
 }
 
 .main_con_i_2 {
@@ -161,7 +184,6 @@ header .inner .nav h1 img {
   background-image: url(../img/kari/cakea.jpg);
   background-size: cover;
   background-position: center bottom 30%;
-  float: left;
 }
 
 .clear {
@@ -195,9 +217,9 @@ footer {
   position: relative;
   margin: 0 auto;
   padding: 1em 2em;
-  width: 300px;
+  width: 230px;
   color: #333;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   background-color: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -241,9 +263,9 @@ footer {
           align-items: center;
   margin: 0 auto;
   padding: 1em 2em;
-  width: 300px;
+  width: 200px;
   color: #36374b;
-  font-size: 18px;
+  font-size: 1.4rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   border: 4px solid #36374b;
@@ -499,6 +521,56 @@ footer {
 
 .img-hov-1 img:hover .img-hov-1 p {
   opacity: 0.6;
+}
+
+/* misaki
+-------------------------------------------------------------*/
+.hov {
+  opacity: 1;
+  -webkit-transition: opacity 200ms ease-out;
+  transition: opacity 200ms ease-out;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.hov:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.gallery a .txt .pp {
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+
+.gallery a figure {
+  overflow: hidden;
+}
+
+.gallery a figure img {
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.gallery a figure img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.d-b {
+  display: block;
+}
+
+.view.view-slideup {
+  opacity: 0;
+}
+
+.view.view-slideup.on {
+  opacity: 1;
+  -webkit-animation: view-slideup 2s ease both;
+          animation: view-slideup 2s ease both;
 }
 
 /* * * * * * * * *

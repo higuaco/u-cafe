@@ -9,15 +9,19 @@
 //header background image **index**
 .head-bg-img {
   width: 100%;
-  height: 900px;
+  height: 700px;
   background: linear-gradient(rgba(53, 37, 37, 0.2), rgba(0, 0, 0, 0.2)), url(../img/kari/header.jpg);
   background-size: cover;
+}
+.header_under_index-bk {
+  border-bottom: 1px solid #000;
 }
 /* * * * * * * * *
 *	main about_us
 * * * * * * * * */
 #aboutus {
   margin-top: 90px;
+  padding: 0 20px;
   h2 {
     margin-bottom: 20px;
   }
@@ -32,8 +36,8 @@
   justify-content: space-between;
   align-items: center;
   #aboutus_img img{
-    width: 260px;
-    height: 340px;
+    width: 200px;
+    height: 280px;
     margin-right: 15px;
   }
   #aboutus_b {
@@ -64,6 +68,8 @@
 #news {
   background-color: $ucafe-color;
   margin-top: 200px;
+  margin-left: 50px;
+  margin-right: 50px;
   padding: 60px;
   #news_a {
     p{
@@ -88,8 +94,9 @@
 * * * * * * * * */
 #photo {
   margin-top: 200px;
+  padding: 0 20px;
   h2 {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     text-align: center;
   }
   .photo_bp {
@@ -101,40 +108,43 @@
 }
 //写真一覧
 #photo_b {
-  // clear: both;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 74px;
+  // padding: 0 40px;
   img {
-    width: 310px;
+    width: 280px;
     margin-bottom: 37px;
-    height: 310px;
+    height: 280px;
   }
 }
 /* * * * * * * * *
 *	main Online shop
 * * * * * * * * */
 #online_s {
-  margin: 250px 0;
+  margin: 150px 0;
   padding-top: 30px;
   background-color: $ucafe-color;
-  #onl_p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 70px 50px 0 0;
-    padding-bottom: 70px;
-    img {
-      width: 500px;
-      height: 320px;
-    }
-    #onl_pp {
-      font-size: 1.7rem;
-      line-height: 2.5;
-      text-align: center;
-      p {
-        margin-bottom: 40px;
+  .i-pp {
+    padding: 0 50px;
+    #onl_p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 50px 0 0;
+      padding-bottom: 70px;
+      img {
+        width: 450px;
+        height: 300px;
+      }
+      #onl_pp {
+        font-size: 1.4rem;
+        line-height: 2.5;
+        text-align: center;
+        p {
+          margin-bottom: 40px;
+        }
       }
     }
   }
@@ -146,10 +156,9 @@
 #access {
   margin-bottom: 200px;
   line-height: 2.3;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   #acc_a {
     display: inline-block;
-    // background-color: pink;
     width: 540px;
     #a_p2{
       margin-top: 13px;
@@ -164,7 +173,7 @@
     #a_p3 {
       margin-top: 35px;
       font-weight: bold;
-      font-size: 1.6em;
+      font-size: 1.4em;
     }
     a{
       text-decoration: underline;
@@ -178,8 +187,12 @@
     }
   }
   img {
-    width: 400px;
+    width: 280px;
+    height: 400px;
     margin: 200px 0 0 120px;
+  }
+  .map_a {
+    margin-top: 20px;
   }
 }
 
@@ -217,39 +230,43 @@
   }
   .shop-items {
     .sp-item {
-      margin-bottom: 150px;
-      .sp-item-dd {
-        .siz {
-          width: 460px;
-          height: 460px;
-          margin-bottom: 30px;
-        }
-        .sp-item-ti {
-          font-size: 1.7em;
-        }
-        .sp-item-ti-2 {
-          margin-top: 10px;
-          font-size: 1.4em;
-          color: #b4b4b4;
+      margin-bottom: 100px;
+      .shop-ti {
+      }
+      .sp-item-d {
+        article {
+          margin: 0 10 0 10;
+          a {
+            figure {
+              img {
+                width: 400px;
+                height: 400px;
+              }
+            }
+            .txt {
+              .pp {
+                font-size: 1.6rem;
+                font-weight: 600;
+              }
+              .sp-item-ti-2 {
+                font-size: 1.5rem;
+                color: #b4b4b4;
+              }
+            }
+          }
         }
       }
     }
   }
 }
-
-/* * * * * * * * *
-*	shop-sp-PLANE
-* * * * * * * * */
-.shop-ti-big {
-  height: 68px;
-  margin-top: -80px;
-  background-color: $ucafe-color;
-  .shop-ti-big-p {
-    font-size: 2rem;
-    letter-spacing: 1.2rem;
-    font-weight: bold;
-  }
+article {
+  margin-right: 20px;
+  margin-left: 20px;
 }
+/* * * * * * * * *
+*
+* * * * * * * * */
+
 .sp-dt-main {
   margin-bottom: 80px;
   margin-top: 100px;
@@ -315,7 +332,7 @@
 *	Shopping cart
 * * * * * * * * */
 .bl {
-  background: #d5dbe4;
+  background: #FFF9ED;
 }
 .cart_a {
   .cart_b {
