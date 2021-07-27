@@ -23,12 +23,10 @@ body {
   font-family: 'PT Sans Caption','PT Sans','ヒラギノ角ゴ Pro W3',' Hiragino Kaku Gothic Pro', 'MeiryoUI', 'MSUIGothic', 'メイリオ', 'Meiryo', 'ＭＳＰゴシック', sans-serif;
   line-height: 1.8;
   letter-spacing: 0.2rem;
-  margin: 0;
-}
-
-.container {
   max-width: 1920px;
+  text-align: center;
   margin: 0 auto;
+  overflow: auto;
 }
 
 .inner {
@@ -50,6 +48,16 @@ a {
 h2 {
   font-size: 4.5rem;
   margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+tr, th {
+  font-weight: normal;
+}
+
+select, input, textarea {
+  border: 0;
+  background-color: #F5F8F6;
 }
 
 /* * * * * * * * *
@@ -94,8 +102,8 @@ header .header_under_indx {
 }
 
 .nav img {
-  width: 180px;
-  height: 60px;
+  width: 120px;
+  height: auto;
 }
 
 .nav_li {
@@ -299,7 +307,7 @@ footer {
   position: relative;
   margin: 0 auto;
   padding: 8em 8em;
-  width: 1080px;
+  max-width: 1080px;
   color: #36374b;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -632,13 +640,35 @@ footer {
       justify-content: space-around;
 }
 
+.jc-fs {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .ta-c {
   text-align: center;
+}
+
+.d-i {
+  display: inline;
+}
+
+.d-ib {
+  display: inline-block;
 }
 
 .text_a {
   font-size: 1.6rem;
   line-height: 3.5;
+}
+
+.c-red {
+  color: #bc4242;
+}
+
+.ta-l {
+  text-align-last: left;
 }
 
 /* * * * * * * * *

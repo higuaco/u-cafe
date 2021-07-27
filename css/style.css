@@ -485,4 +485,44 @@ article {
 .cart_i .ww a {
   width: 270px;
 }
+
+/* * * * * * * * *
+*	contact
+* * * * * * * * */
+.cont1 {
+  text-align: left;
+}
+
+#mailform input {
+  width: 800px;
+  padding: 20px;
+}
+
+#mailform .con-phase table tbody tr {
+  padding: 30px 0 10px;
+  display: block;
+  text-align: left;
+}
+
+#mailform .con-phase table tbody tr th {
+  display: block;
+}
+
+#mailform .con-phase table tbody tr td {
+  width: 1080px;
+}
+
+#mailform .con-phase table tbody tr td textarea {
+  width: 1080px;
+  height: 500px;
+}
+
+#mailform .con-phase table tbody tr td .select select {
+  min-width: 400px;
+  padding: 20px;
+}
+
+#mailform .con-phase table tbody tr td .select select input {
+  width: 1080px;
+}
 /*# sourceMappingURL=style.css.map */

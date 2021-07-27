@@ -13,12 +13,12 @@ body {
   font-family:'PT Sans Caption','PT Sans','ヒラギノ角ゴ Pro W3',' Hiragino Kaku Gothic Pro', 'MeiryoUI', 'MSUIGothic', 'メイリオ', 'Meiryo', 'ＭＳＰゴシック', sans-serif;
   line-height: 1.8;
   letter-spacing: 0.2rem;
-  margin: 0;
-}
-.container {
   max-width: 1920px;
+  text-align: center;
   margin: 0 auto;
+  overflow: auto;
 }
+
 .inner {
   max-width: 1080px;
   margin: 0 auto;
@@ -35,8 +35,15 @@ a {
 h2 {
   font-size: 4.5rem;
   margin-bottom: 10px;
+  margin-top: 50px;
 }
-
+tr , th{
+  font-weight: normal;
+}
+select ,input,textarea {
+  border: 0;
+  background-color: $ucafe-color;
+}
 /* * * * * * * * *
 *	reset
 * * * * * * * * */
@@ -71,8 +78,8 @@ header {
   justify-content: space-between;
   height: 90px;
   img {
-    width: 180px;
-    height: 60px;
+    width: 120px;
+    height: auto;
   }
 }
 // nav
@@ -252,7 +259,7 @@ footer {
   position: relative;
   margin: 0 auto;
   padding: 8em 8em;
-  width: 1080px;
+  max-width: 1080px;
   color: $ftr-1;
   transition: 0.3s;
   border: 10px solid $ftr-1;
@@ -519,13 +526,28 @@ footer {
 .jc-sa {
   justify-content: space-around;
 }
+.jc-fs {
+  justify-content: flex-start;
+}
 .ta-c {
   text-align: center;
+}
+.d-i {
+  display: inline;
+}
+.d-ib {
+  display: inline-block;
 }
 .text_a {
   // width: 800px;
   font-size: 1.6rem;
   line-height: 3.5;
+}
+.c-red {
+  color: #bc4242;
+}
+.ta-l {
+  text-align-last: left;
 }
 /* * * * * * * * *
 *	border bdr-1 CHEESECAKE
