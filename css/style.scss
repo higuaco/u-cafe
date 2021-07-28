@@ -72,8 +72,9 @@
   margin-right: 50px;
   padding: 60px;
   #news_a {
+    align-items: flex-end;
     p{
-      margin-bottom: 35px;
+      // margin-bottom: 35px;
       font-size: 1.6rem;
       letter-spacing: .38rem;
       span {
@@ -273,11 +274,15 @@ article {
   .sp-dt-sub1 {
     margin-right: 20px;
     .sp-dt-sub-d1 {
-      margin-right: 20px;
+      height: 350px;
+      margin-right: 10px;
       img {
-        width: 125px;
-        height: 125px;
-        margin-bottom: 10px;
+        width: 110px;
+        height: 110px;
+        // margin-bottom: 10px;
+      }
+      img:last-child{
+        margin-bottom: 0;
       }
     }
     .sp-dt-sub-d2 {
@@ -308,7 +313,7 @@ article {
         font-size: 1.6rem;
       }
       .dt-size-po {
-        margin-left: 100px;
+        margin-left: 60px;
       }
     }
     .dt-size-dt {
@@ -322,6 +327,9 @@ article {
         font-size: 1.5rem;
         border: solid 1px #333;
         letter-spacing: 0;
+        p {
+          margin-left: 20px;
+        }
       }
     }
     .dt-text {
@@ -329,6 +337,7 @@ article {
     }
   }
 }
+
 .btn-7 {
   margin-top: 30px;
   margin-bottom: 130px;
@@ -418,28 +427,9 @@ article {
 *	contact
 * * * * * * * * */
 
-// select {
-//   min-width: 400px;
-// }
 .cont1 {
   text-align: left;
 }
-// #mailform table tr th {
-//   padding: 40px 0 10px;
-// }
-// tr {
-//   display: block;
-//   th ,td {
-//     display: block;
-//     text-align-last: left;
-//     min-width: 700px;
-//   }
-// }
-#mailform input {
-  width: 800px;
-  padding: 20px;
-}
-
 #mailform {
   .con-phase {
     table {
@@ -455,23 +445,27 @@ article {
             width: 1080px;
             textarea {
               width: 1080px;
-              height: 500px;
+              height: 300px;
             }
+            input {
+              width: 1080px;
+              padding: 20px;
+            }
+          }
             .select {
               select {
                 min-width: 400px;
                 padding: 20px;
-
                 option {
                 }
-                input {
-                  width: 1080px;
-                }
-              }
             }
           }
         }
       }
     }
+  }
+  .btn-8 {
+    margin-top: 50px;
+    margin-bottom: 120px;
   }
 }

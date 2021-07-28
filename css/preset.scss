@@ -35,7 +35,7 @@ a {
 h2 {
   font-size: 4.5rem;
   margin-bottom: 10px;
-  margin-top: 50px;
+  // margin-top: 50px;
 }
 tr , th{
   font-weight: normal;
@@ -56,7 +56,7 @@ img {
 .sub_t {
   font-size: 2rem;
   letter-spacing: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 /* * * * * * * * *
@@ -385,6 +385,47 @@ footer {
   background-color: #f4f3ef;
 }
 
+/*	btn-8 お問い合わせ送信ボタン
+-------------------------------*/
+.btn-8 button {
+  text-align: center;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 380px;
+  color: #fff;
+  font-size: 1.6rem;
+  border: 1px solid #fff;
+  background-color: $atr;
+  transition: 0.3s;
+}
+
+
+.btn-8 button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -35px;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 1px;
+  background-color: #e5e5e5;
+  transition: 0.3s;
+}
+
+.btn-8 button:hover {
+  text-decoration: none;
+  background-color: $ucafe-color;
+  border: 1px solid $btn4-1;
+  color: #adabae;
+}
+
+.btn-8 button:hover::after {
+  transform: translateX(3px);
+  background-color: $btn4-1;
+}
+
 /* * * * * * * * *
 *	hover
 * * * * * * * * */
@@ -499,11 +540,11 @@ footer {
 }
 .photo_t {
   width: 500px;
-  height: 617px;
+  height: 750px;
 }
 .photo_y {
   width: 500px;
-  height: 334px;
+  height: 300px;
 }
 .d-f {
   display: flex;
@@ -532,6 +573,9 @@ footer {
 .ta-c {
   text-align: center;
 }
+.ta-l {
+  text-align: left;
+}
 .d-i {
   display: inline;
 }
@@ -539,7 +583,6 @@ footer {
   display: inline-block;
 }
 .text_a {
-  // width: 800px;
   font-size: 1.6rem;
   line-height: 3.5;
 }
@@ -548,6 +591,18 @@ footer {
 }
 .ta-l {
   text-align-last: left;
+}
+.mb_50 {
+  margin-bottom: 60px;
+}
+.mb_35 {
+  margin-bottom: 35px;
+}
+.mb_100 {
+  margin-bottom: 100px;
+}
+.mt_50 {
+  margin-top: 50px;
 }
 /* * * * * * * * *
 *	border bdr-1 CHEESECAKE
