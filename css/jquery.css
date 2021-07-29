@@ -50,16 +50,20 @@
   }
 
 
+/*==================================================
+ふわっ
+===================================*/
+
 /* fadeUp */
 
-.fadeInUp{
-  animation-name:fadeAnime;
+.fadeUp{
+  animation-name:fadeUpAnime;
   animation-duration:0.5s;
   animation-fill-mode:forwards;
   opacity:0;
   }
 
-  @keyframes fadeInUpAnime{
+  @keyframes fadeUpAnime{
     from {
       opacity: 0;
     transform: translateY(100px);
@@ -74,6 +78,6 @@
 
   /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
 
-  .fadeInUpTrigger{
+  .fadeUpTrigger{
       opacity: 0;
   }
