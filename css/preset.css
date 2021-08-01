@@ -15,7 +15,7 @@ html {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -732,6 +732,10 @@ footer {
 
 .mt_50 {
   margin-top: 50px;
+}
+
+.ml_10 {
+  margin-left: 10px;
 }
 
 /* * * * * * * * *

@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 html { font-size: 50%; }
-img { max-width: 100%; }
+img { width: 100%; }
 body {
   color: #333;
   font-family:'PT Sans Caption','PT Sans','ヒラギノ角ゴ Pro W3',' Hiragino Kaku Gothic Pro', 'MeiryoUI', 'MSUIGothic', 'メイリオ', 'Meiryo', 'ＭＳＰゴシック', sans-serif;
@@ -603,6 +603,9 @@ footer {
 }
 .mt_50 {
   margin-top: 50px;
+}
+.ml_10 {
+  margin-left: 10px;
 }
 /* * * * * * * * *
 *	border bdr-1 CHEESECAKE

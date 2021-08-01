@@ -272,13 +272,15 @@ article {
   margin-bottom: 80px;
   margin-top: 100px;
   .sp-dt-sub1 {
-    margin-right: 20px;
+    width: 100px;
+    margin-left: 100px;
     .sp-dt-sub-d1 {
       height: 350px;
       margin-right: 10px;
       img {
-        width: 110px;
+        width: 350px;
         height: 110px;
+        vertical-align: bottom;/*画像の下にできる余白を削除*/
         // margin-bottom: 10px;
       }
       img:last-child{
@@ -295,18 +297,21 @@ article {
     margin-left: 20px;
     width: 450px;
     .sp-dt-name {
-      font-size: 1.8rem;
+      font-size: 2rem;
+      font-weight: 600;
     }
     .sp-dt-name2 {
-      margin-bottom: 20px;
-      font-size: 1.4rem;
+      margin-bottom: 40px;
+      font-size: 1.6rem;
+      font-weight: 600;
     }
     .dt-price {
       width: 200px;
       height: 40px;
       line-height: 40px;
       font-size: 1.5rem;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      font-weight: 600;
     }
     .dt-size {
       .dt-size-ti {
@@ -317,7 +322,7 @@ article {
       }
     }
     .dt-size-dt {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       .dt-size {
         margin-right: 20px;
         text-align: center;
@@ -329,6 +334,19 @@ article {
         letter-spacing: 0;
         p {
           margin-left: 20px;
+        }
+      }
+      .dt-size2 {
+        margin-right: 20px;
+        text-align: center;
+        width: 80px;
+        height: 40px;
+        line-height: 40px; //heightと連動
+        font-size: 1.5rem;
+        border: solid 1px #333;
+        letter-spacing: 0;
+        p {
+          margin-left: 23px;
         }
       }
     }
