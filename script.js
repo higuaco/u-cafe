@@ -65,3 +65,19 @@ $('.gallery2').on('beforeChange', function(event, slick, currentSlide, nextSlide
 	//サムネイルのslick-currentを削除し次のスライド要素にslick-currentを追加
 	$(".choice-btn .slick-slide").removeClass("slick-current").eq(index).addClass("slick-current");
 });
+
+
+// ------------------ショッピング ボタン押して値段表示------------------//
+$(function(){
+  $('.section').hide();
+
+  $('.secList').on('click',function(){
+    // クリックした要素の ID と違うクラス名のセクションを非表示
+    $('.section').not($('.'+$(this).attr('id'))).hide();
+    // クリックした要素の ID と同じクラスのセクションを表示
+    $('.'+$(this).attr('id')).show();
+
+    // toggle にすると、同じボタンを 2 回押すと非表示になる
+    // $('.'+$(this).attr('id')).toggle();
+  });
+});

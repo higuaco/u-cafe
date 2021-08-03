@@ -50,8 +50,8 @@
       </div>
       <div class="inner">
 
-        <!-- form -->
-        <form method="POST" action="sp_cart.php">
+
+
           <div class="sp-dt-main d-f js-sb">
             <div class="sp-dt-sub1 fadeUpTrigger">
               <ul class="gallery2">
@@ -69,30 +69,50 @@
             <div class="sp-dt-sub2 d ta-l fadeUpTrigger">
               <p class="sp-dt-name ta-c">CHEESECAKE -MACCHA-</p>
               <p class="sp-dt-name2 ta-c">チーズケーキ -抹茶-</p>
-              <div class="dt-price">1500円（税込み）</div>
+
+              <!-- Price Section -->
+              <div class="dt-price d-f">
+                <p>価格：</p>
+                <!-- Section -->
+                <div class="c-m_s section">
+                  <p>1,000円（税込）</p>
+                </div>
+                <div class="c-m_m section">
+                  <p>2,000円（税込）</p>
+                </div>
+                <div class="c-m_l section">
+                  <p>3,000円（税込）</p>
+                </div>
+              </div>
+
               <div class="dt-size d-f">
                 <div class="dt-size-ti"><p>SIZE</p></div>
                 <div class="dt-size-po"><p>\ 一番人気 /</p></div>
               </div>
               <div class="dt-size-dt d-f">
-                <div class="dt-size">
-                  <p>12cm</p>
+                <!-- List -->
+                <div>
+                  <button id="c-m_s" class="secList dt-size" value="12cm" name="size"onclick="buy_s();">12cm</button>
                 </div>
-                <div class="dt-size">
-                  <p>15cm</p>
+                <div>
+                  <button id="c-m_m" class="secList dt-size" value="15cm" name="size"onclick="buy_m();">15cm</button>
                 </div>
-                <div class="dt-size">
-                  <p>18cm</p>
+                <div>
+                  <button id="c-m_l" class="secList dt-size" value="18cm" name="size"onclick="buy_l();">18cm</button>
                 </div>
+
               </div>
-              <div class="dt-text"><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></div>
+              <div class="dt-text"><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス</p></div>
             </div>
-            <!-- /.sp-dt-sub2 -->
+              <!-- /.sp-dt-sub2 -->
           </div>
-            <!-- /.sp-dt-maim -->
-          <div class="btn-6 fadeUpTrigger">
-            <a href="">購入する</a>
-          </div>
+          <!-- /.sp-dt-maim -->
+        <!-- form -->
+        <form method="POST" action="#">
+	  <input type="hidden"name="size"value="">
+          <button type="submit" class="btn-6 fadeUpTrigger"id="sub"onclick="buy();">
+            <span>購入する</span>
+          </button>
         </form>
 
         <div class="btn-7 fadeUpTrigger">
@@ -103,7 +123,7 @@
         <!-- footer -->
       <div class="main_contact">
         <img loading="lazy" class="main_con_i fadeUpTrigger" src="img/u-cafe-logo_black.png" alt="ロゴ黒">
-        <p class="main_con_p fadeUpTrigger">You and Me Café</p>
+        <p class="main_con_p fadeUpTrigger">You and Me Cafe</p>
         <div class="main_cons d-f jc-c fadeUpTrigger">
           <div class="main_con_i_1"></div>
           <div class="main_con_i_2"></div>
@@ -127,5 +147,30 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="script.js"></script>
+    <script>
+
+	function buy_s(){
+		var s=document.getElementById('c-m_s');
+		var size=s.value;
+		document.getElementById("sub").value=size;
+	}
+	function buy_m(){
+		var m=document.getElementById('c-m_m');
+		var size=m.value;
+		document.getElementById("sub").value=size;
+	}
+	function buy_l(){
+		var l=document.getElementById('c-m_l');
+		var size=l.value;
+		document.getElementById("sub").value=size;
+	}
+	function buy(){
+		var size=document.getElementById('sub');
+		if(size.value==""){
+			alert("サイズを選択してください");
+		}
+	}
+
+    </script>
   </body>
 </html>

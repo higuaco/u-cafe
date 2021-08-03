@@ -325,16 +325,21 @@ article {
       margin-bottom: 30px;
       .dt-size {
         margin-right: 20px;
-        text-align: center;
+        cursor: pointer;/*カーソルを指マークに変更*/
+        background-color: #fff;
         width: 80px;
         height: 40px;
         line-height: 40px; //heightと連動
         font-size: 1.5rem;
         border: solid 1px #333;
         letter-spacing: 0;
-        p {
-          margin-left: 20px;
-        }
+        padding-left: 20px;
+      }
+      .dt-size:hover {
+        background-color: $ucafe-color;
+      }
+      .dt-size:focus {
+        background-color: $ucafe-color;
       }
       .dt-size2 {
         margin-right: 20px;
@@ -450,6 +455,7 @@ article {
 }
 #mailform {
   .con-phase {
+    width: 1000px;
     table {
       tbody {
         tr {
@@ -460,13 +466,13 @@ article {
             display: block;
           }
           td {
-            width: 1080px;
+            width: 1000px;
             textarea {
-              width: 1080px;
+              width: 1000px;
               height: 300px;
             }
             input {
-              width: 1080px;
+              width: 1000px;
               padding: 20px;
             }
           }
