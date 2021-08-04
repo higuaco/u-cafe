@@ -39,8 +39,6 @@ $token = isset( $_POST[ 'g-recaptcha-response' ] ) ? $_POST[ 'g-recaptcha-respon
 $action = isset( $_POST[ 'action' ] ) ? $_POST[ 'action' ] : NULL;
 //reCAPTCHA の検証を通過したかどうかの真偽値（★追加）
 $rcv3_result = false;
-echo $token;
-echo $action;
 
 // reCAPTCHA のトークンとアクション名が取得できていれば（★追加）
 if ( $token && $action ) {
@@ -87,20 +85,18 @@ if ( $rcv3_result ) { //（★追加）
   date_default_timezone_set( 'Asia/Tokyo' );
 
   //変数にエスケープ処理したセッション変数の値を代入
-  $subject = h( $_SESSION[ 'subject' ] );
   $name = h( $_SESSION[ 'name' ] );
-  $ruby = h( $_SESSION[ 'ruby' ] );
-  $tel = h( $_SESSION[ 'tel' ] );
   $email = h( $_SESSION[ 'email' ] );
+  $tel = h( $_SESSION[ 'tel' ] );
+  $subject = h( $_SESSION[ 'subject' ] );
   $body = h( $_SESSION[ 'body' ] );
 
   //メール本文の組み立て
   $mail_body = 'コンタクトページからのお問い合わせ' . "\n\n";
   $mail_body .= date( "Y年m月d日 H時i分" ) . "\n\n";
   $mail_body .= "お名前： " . $name . "\n";
-  $mail_body .= "フリガナ： " . $ruby . "\n";
-  $mail_body .= "お電話番号： " . $tel . "\n\n";
   $mail_body .= "Email： " . $email . "\n";
+  $mail_body .= "お電話番号： " . $tel . "\n\n";
   $mail_body .= "＜お問い合わせ内容＞" . "\n" . $body;
 
   //-------- sendmail（mb_send_mail）を使ったメールの送信処理------------
@@ -134,8 +130,6 @@ if ( $result ) {
   $_SESSION = array(); //空の配列を代入し、すべてのセッション変数を消去
   session_destroy(); //セッションを破棄
 
-echo $result;
-
   //自動返信メールの送信処理
   //自動返信メールの送信が成功したかどうかのメッセージを表示する場合は true
   $show_autoresponse_msg = true;
@@ -161,34 +155,22 @@ echo $result;
   } else {
     $result2 = mb_send_mail( $email, $ar_subject, $ar_body , $ar_header , '-f' . $returnMail );
   }
-
 } else {
   //送信失敗時（もしあれば）
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="keyword" content="u-cafe,熊本カフェ,熊本パフェ">
-  <meta name="description" content="あなたとわたしのカフェ。U-cafe。山小屋をイメージした木のぬくもりが温かい空間で、元パティシエがつくる洗練された料理をあなたに。">
-  <meta name="robots" content="noindex,nofollow">
-  <title>コンタクトフォーム（完了） | U-cafe 【公式】あなたとわたしのカフェ。| 熊本市東区</title>
-  <!-- favicon用 -->
-  <link rel="shortcut icon" href="favicon/icon.ico">
-  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png">
-
-  <meta name="viewport"
-    content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/preset.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/jquery.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>コンタクトフォーム（完了）</title>
+  <link href="../../../../plugins/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
 </head>
-
 
 <body>
   <div class="container">
@@ -199,7 +181,7 @@ echo $result;
     <p>送信完了いたしました。</p>
     <?php else: ?>
     <p>申し訳ございませんが、送信に失敗しました。</p>
-    <p>しばらくしてもう一度お試しになるか、電話にてご連絡ください。</p>
+    <p>しばらくしてもう一度お試しになるか、メールにてご連絡ください。</p>
     <p>ご迷惑をおかけして誠に申し訳ございません。</p>
     <?php endif; ?>
 
@@ -217,7 +199,6 @@ echo $result;
     <!-- ここまで reCAPTCHA 結果表示（テスト用）-->
 
   </div>
-  <script src="script.js"></script>
 </body>
 
 </html>
