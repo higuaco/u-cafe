@@ -10,7 +10,8 @@
 .head-bg-img {
   width: 100%;
   height: 700px;
-  background: linear-gradient(rgba(53, 37, 37, 0.2), rgba(0, 0, 0, 0.2)), url(../img/kari/header.jpg);
+  // background: linear-gradient(rgba(99, 98, 98, 0.2), rgba(0, 0, 0, 0.2)), url(../img/kari/header.jpg);
+  background-image: url(../img/kari/header.jpg);
   background-size: cover;
 }
 .header_under_index-bk {
@@ -43,16 +44,19 @@
   #aboutus_b {
     text-align: center;
     #ap {
-      margin-top: -110px;
+      margin-top: 30px;
       font-size: 3.3rem;
       line-height: 1.8;
       letter-spacing: 1.7rem;
+      font-weight: 500;
     }
     p {
-      margin-top: 111px;
-      width: 463px;
+      margin-top: 110px;
+      line-height: 2.2;
+      width: 550px;
       font-size: 1.6rem;
       background: #fff;
+      font-weight: 500;
     }
   }
 }
@@ -190,7 +194,7 @@
   img {
     width: 280px;
     height: 400px;
-    margin: 200px 0 0 120px;
+    margin: 200px 0 0 60px;
   }
   .map_a {
     margin-top: 20px;
@@ -470,6 +474,7 @@ article {
             textarea {
               width: 1000px;
               height: 300px;
+              padding: 20px;
             }
             input {
               width: 1000px;
@@ -480,8 +485,6 @@ article {
               select {
                 min-width: 400px;
                 padding: 20px;
-                option {
-                }
             }
           }
         }
@@ -492,4 +495,46 @@ article {
     margin-top: 50px;
     margin-bottom: 120px;
   }
+}
+/* * * * * * * * * * * * * * *
+*	confirm 問い合わせ（確認）
+* * * * * * * * * * * * * * */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  color: #707070;
+  .nerp-1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+  }
+  .conf_table1 {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    margin-top: 60px;
+    .conf_table2 {
+      margin: 0 auto;
+      caption {
+        text-align-last: left;
+      }
+      tr {
+        text-align-last: left;
+        border: 1px solid #333;
+        th {
+          padding: 20px 20px 20px 10px;
+          border: 1px solid #333;
+        }
+        td {
+          padding: 20px 20px 20px 10px;
+        }
+      }
+    }
+  }
+  form {
+    margin-right: 30px;
+    display: inline-block;
+  }
+}
+.error {
+  color: #BC4242;
 }

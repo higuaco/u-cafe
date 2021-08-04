@@ -48,7 +48,7 @@ $ticket = $_SESSION[ 'ticket' ];
   <meta name="keyword" content="u-cafe,熊本カフェ,熊本パフェ">
   <meta name="description" content="あなたとわたしのカフェ。U-cafe。山小屋をイメージした木のぬくもりが温かい空間で、元パティシエがつくる洗練された料理をあなたに。">
   <meta name="robots" content="noindex,nofollow">
-  <title>Photo お問い合わせ | U-cafe 【公式】あなたとわたしのカフェ。| 熊本市東区</title>
+  <title>お問い合わせ | U-cafe 【公式】あなたとわたしのカフェ。| 熊本市東区</title>
   <!-- favicon用 -->
   <link rel="shortcut icon" href="favicon/icon.ico">
   <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
@@ -61,7 +61,6 @@ $ticket = $_SESSION[ 'ticket' ];
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/jquery.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
 </head>
 
 <body>
@@ -102,28 +101,28 @@ $ticket = $_SESSION[ 'ticket' ];
         <p>お気軽にお問い合わせください。<br>以下のフォームに必要事項をご入力いただき、送信ボタンを押してください。<br>（<span class="c-red">＊</span>マークは必須項目です。）</p>
       </div>
       <div>
-        <form id="mailform" action="#" method="POST">
+        <form id="mailform" action="confirm.php" method="POST">
           <div class="con-phase fadeUpTrigger">
             <table>
               <tbody>
+                <!-- 〓〓〓〓〓〓〓〓〓〓 -->
                 <tr>
                   <th>お問い合わせの種類
                     <span class="error"><?php echo h( $error_subject ); ?></span>
                   </th>
                   <td>
-
                     <div class="select">
                       <select name="subject">
                         <option value="" selected="selected">選択してください</option>
-                        <option value="予約">予約する（当日のご予約は電話で確認をお願いします。）</option>
-                        <option value="オーダークッキー">オーダークッキーについて</option>
+                        <option value="予約する">予約する（当日のご予約は電話で確認をお願いします。）</option>
+                        <option value="オーダークッキーについて">オーダークッキーについて</option>
                         <option value="ケーキの注文">ケーキの注文</option>
                         <option value="その他">その他</option>
                       </select>
                     </div>
-
                   </td>
                 </tr>
+                <!-- 〓〓〓〓〓〓〓〓〓〓 -->
                 <tr>
                   <th><span class="c-red">＊</span>お名前
                     <span class="error"><?php echo h( $error_name ); ?></span>
@@ -132,56 +131,69 @@ $ticket = $_SESSION[ 'ticket' ];
                       placeholder="氏名" value="<?php echo h($name); ?>">
                   </td>
                 </tr>
+                <!-- 〓〓〓〓〓〓〓〓〓〓 -->
                 <tr>
-                  <th><span class="c-red">＊</span> フリガナ
+                  <th>フリガナ
                     <span class="error"><?php echo h( $error_ruby ); ?></span>
                   </th>
-                  <td><input type="text" name="ruby" required="required" data-charcheck="kana" /></td>
+                  <td><input type="text" class="form-control validate max50" id="ruby" name="ruby" placeholder="フリガナ"
+                      value="<?php echo h($ruby); ?>">
+                  </td>
                 </tr>
+                <!-- 〓〓〓〓〓〓〓〓〓〓 -->
                 <tr>
-                  <th><span class="c-red">＊</span>電話番号　"-"(ハイフン)は不要です。
+                  <th><span class="c-red">＊</span>電話番号　半角英数字でご入力ください。
                     <span class="error"><?php echo h( $error_tel ); ?></span>
                     <span class="error"><?php echo h( $error_tel_format ); ?></span>
                   </th>
                   <td>
-                    <input type="text" class="validate max30 tel form-control" id="tel" name="tel"
-                      value="<?php echo h($tel); ?>" placeholder="お電話番号（半角英数字でご入力ください）">
+                    <input type="text" class="validate max30 tel form-control required" id="tel" name="tel"
+                      value="<?php echo h($tel); ?>" placeholder="09011112222">
                   </td>
                 </tr>
+                <!-- 〓〓〓〓〓〓〓〓〓〓 -->
                 <tr>
                   <th><span class="c-red">＊</span> メールアドレス
                     <span class="error"><?php echo h( $error_email ); ?></span>
                   </th>
                   <td><input type="text" class="form-control validate mail required" id="email" name="email"
-                      placeholder="Email アドレス" value="<?php echo h($email); ?>">
+                      placeholder="xxx@xxx.jp" value="<?php echo h($email); ?>">
                   </td>
                 </tr>
+                <!-- 〓〓〓〓〓〓〓〓〓〓 -->
                 <tr>
                   <th><span class="c-red">＊</span> メールアドレス　確認用
                     <span class="error"><?php echo h( $error_email_check ); ?></span>
                   </th>
                   <td><input type="text" class="form-control validate email_check required" id="email_check"
-                      name="email_check" placeholder="Email アドレス（確認のためもう一度ご入力ください。）"
+                      name="email_check" placeholder="xxx@xxx.jp（確認のためもう一度ご入力ください。）"
                       value="<?php echo h($email_check); ?>">
                   </td>
                 </tr>
+                <!-- 〓〓〓〓〓〓〓〓〓〓 -->
                 <tr>
-                  <th>自由入力欄
+                  <th><span class="c-red">＊</span> お問い合わせ内容
                     <span class="error"><?php echo h( $error_body ); ?></span>
                   </th>
                   <td>
-                    <textarea name="body" rows="30" cols="60"></textarea>
+                    <textarea class="form-control validate max1000 required" id="body" name="body"
+                      placeholder="お問い合わせ内容（1000文字まで）をお書きください" rows="3"><?php echo h($body); ?></textarea>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <!-- 〓〓〓〓〓〓〓〓〓〓 -->
           <div class="btn-8 fadeUpTrigger">
             <button type="submit" class="hov mfp_element_submit mfp_element_all">入力確認画面へ進む</button>
+            <!--確認ページへトークンをPOSTする、隠しフィールド「ticket」-->
+            <input type="hidden" name="ticket" value="<?php echo h($ticket); ?>">
           </div>
         </form>
       </div>
     </div>
+    <!-- reCAPTCHA ウィジェットを表示する場合は以下のコメントアウトを外す -->
+    <script src="https://www.google.com/recaptcha/api.js?render=<?php echo $siteKey; ?>"></script>
     <!-- /.inner -->
 
     <!-- footer -->
@@ -210,6 +222,8 @@ $ticket = $_SESSION[ 'ticket' ];
     <small>Copyright &copy Sheepontaneous,All rights reserved.</small>
   </footer>
   <script src="script.js"></script>
+
+
 </body>
 
 </html>
