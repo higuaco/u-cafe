@@ -298,7 +298,7 @@ article {
     }
   }
   .sp-dt-sub2 {
-    margin-left: 20px;
+    margin-right: 100px;
     width: 450px;
     .sp-dt-name {
       font-size: 2rem;
@@ -319,6 +319,7 @@ article {
     }
     .dt-size {
       .dt-size-ti {
+        font-weight: 600;
         font-size: 1.6rem;
       }
       .dt-size-po {
@@ -335,15 +336,18 @@ article {
         height: 40px;
         line-height: 40px; //heightと連動
         font-size: 1.5rem;
-        border: solid 1px #333;
+        font-weight: 600;
+        border: solid 2px #333;
         letter-spacing: 0;
         padding-left: 20px;
       }
       .dt-size:hover {
-        background-color: $ucafe-color;
+        background-color: $u-litegreen;
+        color: #fff;
       }
       .dt-size:focus {
-        background-color: $ucafe-color;
+        background-color: $u-litegreen;
+        color: #fff;
       }
       .dt-size2 {
         margin-right: 20px;
@@ -364,6 +368,7 @@ article {
     }
   }
 }
+
 
 .btn-7 {
   margin-top: 30px;
