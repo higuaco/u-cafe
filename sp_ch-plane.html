@@ -67,9 +67,8 @@
             </div>
             <!-- /.sp-dt-sub1 -->
             <div class="sp-dt-sub2 d ta-l fadeUpTrigger">
-              <p class="sp-dt-name ta-c">CHEESECAKE -PLANE-</p>
-              <p class="sp-dt-name2 ta-c">チーズケーキ -プレーン-</p>
-
+                <p class="sp-dt-name">CHEESECAKE -PLANE-</p>
+                <p class="sp-dt-name2">チーズケーキ -プレーン-</p>
               <!-- Price Section -->
               <div class="dt-price d-f">
                 <p>価格：</p>
@@ -100,17 +99,22 @@
                 <div>
                   <button id="c-m_l" class="secList dt-size" value="18cm" name="size"onclick="buy_l();">18cm</button>
                 </div>
-
               </div>
+
+              <div class="dt-size d-f">
+                <div class="dt-size-ti"><p>個数</p></div>
+              </div>
+              <!-- form -->
+              <form method="POST" action="sp_cart.html">
+              <input class="sp_number" type="text" required="required" name="number">
+
               <div class="dt-text"><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス</p></div>
             </div>
-              <!-- /.sp-dt-sub2 -->
+            <!-- /.sp-dt-sub2 -->
           </div>
           <!-- /.sp-dt-maim -->
-        <!-- form -->
-        <form method="POST" action="#">
-	  <input type="hidden"name="size"value="">
-          <button type="submit" class="btn-6 fadeUpTrigger"id="sub"onclick="buy();">
+          <input type="hidden"name="size"value="">
+          <button type="submit" class="btn-6 fadeUpTrigger"id="sub" onclick="return buy();">
             <span>購入する</span>
           </button>
         </form>
@@ -168,7 +172,11 @@
 		var size=document.getElementById('sub');
 		if(size.value==""){
 			alert("サイズを選択してください");
-		}
+      return false;
+    } else {
+      return true;
+    }
+
 	}
 
     </script>

@@ -32,7 +32,6 @@
   }
 }
 #aboutus_a {
-  // margin-top: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -301,26 +300,30 @@ article {
     margin-right: 100px;
     width: 450px;
     .sp-dt-name {
-      font-size: 2rem;
+      margin-top: -10px;
+      font-size: 2.3rem;
       font-weight: 600;
+      letter-spacing: 0.8rem;
+      margin-bottom: 10px;
     }
     .sp-dt-name2 {
+      // margin-top: -50px;
       margin-bottom: 40px;
       font-size: 1.6rem;
-      font-weight: 600;
+      font-weight: 500;
+      letter-spacing: 1.1rem;
     }
     .dt-price {
       width: 200px;
       height: 40px;
       line-height: 40px;
-      font-size: 1.5rem;
-      margin-bottom: 40px;
-      font-weight: 600;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      font-weight: 500;
     }
     .dt-size {
       .dt-size-ti {
-        font-weight: 600;
-        font-size: 1.6rem;
+        font-weight: 500;
       }
       .dt-size-po {
         margin-left: 60px;
@@ -336,8 +339,8 @@ article {
         height: 40px;
         line-height: 40px; //heightと連動
         font-size: 1.5rem;
-        font-weight: 600;
-        border: solid 2px #333;
+        font-weight: 500;
+        border: solid 1px #333;
         letter-spacing: 0;
         padding-left: 20px;
       }
@@ -367,6 +370,14 @@ article {
       font-size: 1.5rem;
     }
   }
+}
+.sp_number {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  background-color: #fff;
+  text-align: right;
+  margin-bottom: 40px;
 }
 
 
@@ -542,4 +553,39 @@ article {
 }
 .error {
   color: #BC4242;
+}
+/* * * * * * * * *
+*	contact.php
+* * * * * * * * */
+.con-phase {
+  .form-group {
+    padding: 30px 0 10px;
+    display: block;
+    text-align: left;
+    label {
+      display: block;
+      span .error {
+        color: #bc4242;
+      }
+    }
+    textarea {
+      width: 1000px;
+      height: 300px;
+      padding: 20px;
+    }
+    input {
+      width: 1000px;
+      padding: 20px;
+    }
+    .select {
+      select {
+        min-width: 400px;
+        padding: 20px;
+      }
+    }
+  }
+}
+.btn-8 {
+  margin-top: 50px;
+  margin-bottom: 120px;
 }

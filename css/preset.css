@@ -216,6 +216,10 @@ header .header_under_indx {
   border-top: 3px solid #000;
 }
 
+.w450 {
+  width: 450px;
+}
+
 /* * * * * * * * *
 *	footer
 * * * * * * * * */
