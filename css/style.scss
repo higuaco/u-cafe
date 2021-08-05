@@ -466,52 +466,6 @@ article {
   }
 }
 
-/* * * * * * * * *
-*	contact
-* * * * * * * * */
-
-.cont1 {
-  text-align: left;
-}
-#mailform {
-  .con-phase {
-    width: 1000px;
-    table {
-      tbody {
-        tr {
-          padding: 30px 0 10px;
-          display: block;
-          text-align: left;
-          th {
-            display: block;
-          }
-          td {
-            width: 1000px;
-            textarea {
-              width: 1000px;
-              height: 300px;
-              padding: 20px;
-            }
-            input {
-              width: 1000px;
-              padding: 20px;
-            }
-          }
-            .select {
-              select {
-                min-width: 400px;
-                padding: 20px;
-            }
-          }
-        }
-      }
-    }
-  }
-  .btn-8 {
-    margin-top: 50px;
-    margin-bottom: 120px;
-  }
-}
 /* * * * * * * * * * * * * * *
 *	confirm 問い合わせ（確認）
 * * * * * * * * * * * * * * */

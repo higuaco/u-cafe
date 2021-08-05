@@ -126,7 +126,7 @@ $ticket = $_SESSION[ 'ticket' ];
               <span class="error"><?php echo h( $error_email ); ?></span>
             </label>
             <input type="text" class="form-control validate mail required" id="email" name="email"
-              placeholder="Email アドレス" value="<?php echo h($email); ?>">
+              placeholder="xxx@xxx.com" value="<?php echo h($email); ?>">
           </div>
           <!-- 〓〓〓〓〓〓 -->
           <div class="form-group">
@@ -134,7 +134,7 @@ $ticket = $_SESSION[ 'ticket' ];
               <span class="error"><?php echo h( $error_email_check ); ?></span>
             </label>
             <input type="text" class="form-control validate email_check required" id="email_check" name="email_check"
-              placeholder="Email アドレス（確認のためもう一度ご入力ください。）" value="<?php echo h($email_check); ?>">
+              placeholder="xxx@xxx.com（確認のためもう一度ご入力ください。）" value="<?php echo h($email_check); ?>">
           </div>
           <!-- 〓〓〓〓〓〓 -->
           <div class="form-group">
@@ -143,7 +143,7 @@ $ticket = $_SESSION[ 'ticket' ];
               <span class="error"><?php echo h( $error_tel_format ); ?></span>
             </label>
             <input type="text" class="validate max30 tel form-control required" id="tel" name="tel"
-              value="<?php echo h($tel); ?>" placeholder="お電話番号（半角英数字でご入力ください）">
+              value="<?php echo h($tel); ?>" placeholder="09000000000 (ハイフン無し)">
           </div>
           <!-- 〓〓〓〓〓〓 -->
           <div class="form-group">
@@ -154,7 +154,7 @@ $ticket = $_SESSION[ 'ticket' ];
               <span id="count"> </span>/1000
             </div>
             <textarea class="form-control validate max1000 required" id="body" name="body"
-              placeholder="お問い合わせ内容（1000文字まで）を書きください" rows="3"><?php echo h($body); ?></textarea>
+              placeholder="お問い合わせ（1000文字まで）" rows="3"><?php echo h($body); ?></textarea>
           </div>
       </div>
       <!-- 〓〓〓〓〓〓 -->

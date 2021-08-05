@@ -101,80 +101,92 @@ if ( count( $error ) > 0 ) {
 <html lang="ja">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>コンタクトフォーム（確認）</title>
-  <link href="../bootstrap.min.css" rel="stylesheet">
-  <link href="../style.css" rel="stylesheet">
-</head>
+  <meta charset="UTF-8">
+  <meta name="keyword" content="u-cafe,熊本カフェ,熊本パフェ">
+  <meta name="description" content="あなたとわたしのカフェ。U-cafe。山小屋をイメージした木のぬくもりが温かい空間で、元パティシエがつくる洗練された料理をあなたに。">
+  <meta name="robots" content="noindex,nofollow">
+  <title>お問い合わせ（確認） | U-cafe 【公式】あなたとわたしのカフェ。| 熊本市東区</title>
+  <!-- favicon用 -->
+  <link rel="shortcut icon" href="favicon/icon.ico">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png">
+
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/preset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
+
 <body>
-  <div class="container">
-    <h2>お問い合わせ確認画面</h2>
-    <p>以下の内容でよろしければ「送信する」をクリックしてください。<br>
-      内容を変更する場合は「戻る」をクリックして入力画面にお戻りください。</p>
-    <div class="table-responsive confirm_table">
-      <table class="table table-bordered" style="max-width:600px;">
-        <caption>ご入力内容</caption>
-        <tr>
-          <th>お名前</th>
-          <td><?php echo h($name); ?></td>
-        </tr>
-        <tr>
-          <th>Email</th>
-          <td><?php echo h($email); ?></td>
-        </tr>
-        <tr>
-          <th>お電話番号</th>
-          <td><?php echo h($tel); ?></td>
-        </tr>
-        <tr>
-          <th>件名</th>
-          <td><?php echo h($subject); ?></td>
-        </tr>
-        <tr>
-          <th style="white-space: nowrap;">お問い合わせ内容</th>
-          <td><?php echo nl2br(h($body)); ?></td>
-        </tr>
-      </table>
+  <div class="inner">
+    <div class="container">
+      <p class="nerp-1">お問い合わせ確認画面</p>
+      <p class="nerp-2">以下の内容でよろしければ「送信する」をクリックしてください。<br>
+        内容を変更する場合は「戻る」をクリックして入力画面にお戻りください。</p>
+      <div class="conf_table1">
+        <table class="conf_table2">
+          <caption>ご入力内容</caption>
+          <tr>
+            <th>お問い合わせの種類</th>
+            <td><?php echo h($subject); ?></td>
+          </tr>
+          <tr>
+            <th>お名前</th>
+            <td><?php echo h($name); ?></td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td><?php echo h($email); ?></td>
+          </tr>
+          <tr>
+            <th>お電話番号</th>
+            <td><?php echo h($tel); ?></td>
+          </tr>
+          <tr>
+            <th style="white-space: nowrap;">お問い合わせ内容</th>
+            <td><?php echo nl2br(h($body)); ?></td>
+          </tr>
+        </table>
+      </div>
+      <form action="contact.php" method="post" class="confirm">
+        <div class="btn-9"><button type="submit" class="btn btn-secondary">戻る</button></div>
+      </form>
+      <form id="complete" action="complete.php" method="post" class="confirm">
+        <!--  id="complete" （★追加）-->
+        <!-- 完了ページへ渡すトークンの隠しフィールド -->
+        <input type="hidden" name="ticket" value="<?php echo h($ticket); ?>">
+        <div class="btn-10"><button type="submit" class="btn btn-success">送信する</button></div>
+      </form>
     </div>
-    <form action="contact.php" method="post" class="confirm">
-      <button type="submit" class="btn btn-secondary">戻る</button>
-    </form>
-    <form id="complete" action="complete.php" method="post" class="confirm">
-      <!--  id="complete" （★追加）-->
-      <!-- 完了ページへ渡すトークンの隠しフィールド -->
-      <input type="hidden" name="ticket" value="<?php echo h($ticket); ?>">
-      <button type="submit" class="btn btn-success">送信する</button>
-    </form>
-  </div>
-  <script src="https://www.google.com/recaptcha/api.js?render=<?php echo $siteKey; ?>"></script>
-  <!-- reCAPTCHA v3 の読み込み（★追加） -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!-- jQuery の読み込み（★追加） -->
-  <script>
-  //reCAPTCHA v3 トークン取得（★追加）
-  jQuery(function($) {
-    $("#complete").submit(function(event) {
-      var that = $(this);
-      event.preventDefault();
-      var action_name = 'contact'; //アクション名
-      grecaptcha.ready(function() {
-        grecaptcha.execute('<?php echo $siteKey; ?>', {
-          action: action_name
-        }).then(function(token) {
-          //input 要素を生成して値にトークンを設定
-          that.prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
-          //input 要素を生成して値にアクション名を設定
-          that.prepend('<input type="hidden" name="action" value="' + action_name + '">');
-          //unbind で一度 submit のイベントハンドラを削除してから submit() を実行
-          that.unbind('submit').submit();
-        });;
+    <script src="https://www.google.com/recaptcha/api.js?render=<?php echo $siteKey; ?>"></script>
+    <!-- reCAPTCHA v3 の読み込み（★追加） -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!-- jQuery の読み込み（★追加） -->
+    <script>
+    //reCAPTCHA v3 トークン取得（★追加）
+    jQuery(function($) {
+      $("#complete").submit(function(event) {
+        var that = $(this);
+        event.preventDefault();
+        var action_name = 'contact'; //アクション名
+        grecaptcha.ready(function() {
+          grecaptcha.execute('<?php echo $siteKey; ?>', {
+            action: action_name
+          }).then(function(token) {
+            //input 要素を生成して値にトークンを設定
+            that.prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+            //input 要素を生成して値にアクション名を設定
+            that.prepend('<input type="hidden" name="action" value="' + action_name + '">');
+            //unbind で一度 submit のイベントハンドラを削除してから submit() を実行
+            that.unbind('submit').submit();
+          });;
+        });
       });
-    });
-  })
-  </script>
+    })
+    </script>
 </body>
 
 </html>
