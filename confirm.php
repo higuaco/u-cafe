@@ -187,6 +187,7 @@ if ( count( $error ) > 0 ) {
       });
     })
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -491,6 +491,7 @@ article {
 
 .cart_a .cart_item .cart_e {
   padding-top: 30px;
+  margin-left: -200px;
 }
 
 .cart_a .cart_item .cart_e .cart_1 {
@@ -558,6 +559,7 @@ article {
   margin-top: 50px;
   margin-bottom: 20px;
   font-size: 3rem;
+  font-weight: 600;
 }
 
 .container .conf_table1 {
@@ -633,5 +635,39 @@ article {
 .btn-8 {
   margin-top: 50px;
   margin-bottom: 120px;
+}
+
+/* * * * * * * * *
+*	confirm.php
+* * * * * * * * */
+.marker_line40 {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(0%, #bfcdcc));
+  background: linear-gradient(transparent 60%, #bfcdcc 0%);
+  font-weight: 600;
+}
+
+.confirm-logo {
+  width: 250px;
+  margin: 50px 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * *
+*	スマートフォン：599px [max-width : 599px]
+* * * * * * * *  * * * * * * * * * * * * * */
+@media screen and (max-width: 599px) {
+  body {
+    background-color: #00FFFF;
+    /*青色*/
+  }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * *
+*	タブレット：1024px [max-width : 1024px]
+* * * * * * * *  * * * * * * * * * * * * * */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  body {
+    background-color: #66ff00;
+    /*青色*/
+  }
 }
 /*# sourceMappingURL=style.css.map */

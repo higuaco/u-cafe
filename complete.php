@@ -164,29 +164,55 @@ if ( $result ) {
 <html lang="ja">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>コンタクトフォーム（完了）</title>
-  <link href="../../../../plugins/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="keyword" content="u-cafe,熊本カフェ,熊本パフェ">
+  <meta name="description" content="あなたとわたしのカフェ。U-cafe。山小屋をイメージした木のぬくもりが温かい空間で、元パティシエがつくる洗練された料理をあなたに。">
+  <meta name="robots" content="noindex,nofollow">
+  <title>お問い合わせ | U-cafe 【公式】あなたとわたしのカフェ。| 熊本市東区</title>
+  <!-- favicon用 -->
+  <link rel="shortcut icon" href="favicon/icon.ico">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png">
+
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/preset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
+
 <body>
-  <div class="container">
-    <h2>お問い合わせフォーム</h2>
+  <div class="container d-ib">
     <?php if ( $result ): ?>
-    <h3>送信完了!</h3>
-    <p>お問い合わせいただきありがとうございます。</p>
-    <p>送信完了いたしました。</p>
+    <p class="nerp-1">Thank you!</p>
+    <div class="ta-l w550 m-auto">
+      <p class="marker_line40 d-ib">送信完了しました!</p>
+      <p>自動返信メールが送信されます。ご確認ください。</p>
+      <p>内容確認次第、メールもしくはお電話にて返信をさせていただきます。</p>
+      <p>店主一人で料理を作っておりますので、返信にはお時間を頂く場合がございます。</p>
+      <p>ご了承のほど、お願いいたします。</p>
+    </div>
     <?php else: ?>
-    <p>申し訳ございませんが、送信に失敗しました。</p>
-    <p>しばらくしてもう一度お試しになるか、メールにてご連絡ください。</p>
-    <p>ご迷惑をおかけして誠に申し訳ございません。</p>
+    <p class="nerp-1">Sorry...</p>
+    <div class="ta-l w550 m-auto">
+      <p class="marker_line40 d-ib">申し訳ございませんが、送信に失敗しました。</p>
+      <p>しばらくしてもう一度お試しになるか、お電話にてご連絡ください。</p>
+      <p>U-cafe TEL：096-388-2017</p>
+      <p>営業時間11:00 - 18:00 　水曜定休日</p>
+      <p>ご迷惑をおかけして誠に申し訳ございません。</p>
+    </div>
     <?php endif; ?>
 
+    <img class="confirm-logo" src="img/u-cafe_maki.png" alt="マキストーブロゴ">
+    <!-- homeに戻るボタン -->
+    <div class="btn-7 fadeUpTrigger">
+      <a href="/">HOMEに戻る</a>
+    </div>
     <!-- ここから reCAPTCHA 結果表示（テスト用）-->
-    <?php if (isset($rc_result )): ?>
+    <!-- <?php if (isset($rc_result )): ?>
     <h4 style="margin: 20px 0;">reCAPTCHA 判定結果表示</h4>
     <ul>
       <li><?php echo 'success 判定 ：' . $rc_result->success; ?></li>
@@ -195,10 +221,11 @@ if ( $result ) {
     </ul>
     <h4 style="margin: 20px 0;">reCAPTCHA API レスポンス</h4>
     <pre><?php var_dump($rc_result ); ?></pre>
-    <?php endif; ?>
+    <?php endif; ?> -->
     <!-- ここまで reCAPTCHA 結果表示（テスト用）-->
 
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

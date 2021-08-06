@@ -8,6 +8,8 @@
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  float: none;
+  position: static;
 }
 
 html {
@@ -16,7 +18,8 @@ html {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -218,6 +221,14 @@ header .header_under_indx {
 
 .w450 {
   width: 450px;
+}
+
+.w550 {
+  width: 550px;
+}
+
+.m-auto {
+  margin: 0 auto;
 }
 
 /* * * * * * * * *
@@ -875,5 +886,25 @@ button {
 
 .bdr-2::after {
   margin-left: 50px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * *
+*	スマートフォン：599px [max-width : 599px]
+* * * * * * * *  * * * * * * * * * * * * * */
+@media screen and (max-width: 599px) {
+  body {
+    background-color: #00FFFF;
+    /*青色*/
+  }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * *
+*	タブレット：1024px [max-width : 1024px]
+* * * * * * * *  * * * * * * * * * * * * * */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  body {
+    background-color: #66ff00;
+    /*青色*/
+  }
 }
 /*# sourceMappingURL=preset.css.map */
