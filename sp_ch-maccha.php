@@ -1,3 +1,53 @@
+<?php
+
+// $genre = isset($_POST['genre'])? htmlspecialchars($_POST['genre'], ENT_QUOTES, 'utf-8') : '';
+// echo $genre;
+
+$cakeName = isset($_POST['cakeName'])? htmlspecialchars($_POST['cakeName'], ENT_QUOTES, 'utf-8') : '';
+echo $cakeName;
+
+$size = isset($_POST['size'])? htmlspecialchars($_POST['size'], ENT_QUOTES, 'utf-8') : '';
+echo $size;
+
+$number = isset($_POST['number'])? htmlspecialchars($_POST['number'], ENT_QUOTES, 'utf-8') : '';
+echo $number;
+
+session_start();
+//もし、sessionにproductsがあったら
+  if(isset($_SESSION['uProducts'])){
+    //$_SESSION['products']を$productsという変数にいれる
+      $uProducts = $_SESSION['uProducts'];
+    //$productsをforeachで回し、キー(商品名)と値（金額・個数）取得
+      foreach($uProducts as $key => $uProduct){
+        //もし、キーとPOSTで受け取った商品名が一致したら、
+          if($key == $cakeName && $size == $uProduct['size']){
+            //既に商品がカートに入っているので、個数を足し算する
+              $number = (int)$number + (int)$uProduct['number'];
+          }
+      }
+  }
+    //配列に入れるには、$name,$count,$priceの値が取得できていることが前提なのでif文で空のデータを排除する
+  if($cakeName!=''&&$number!=''&&$size!=''){
+      $_SESSION['uProducts'][$cakeName]=[
+          'number' => $number,
+          'size' => $size
+      ];
+  }
+  $uProducts = isset($_SESSION['uProducts'])? $_SESSION['uProducts']:[];
+
+  if(isset($uProducts)){
+        foreach($uProducts as $key => $uProduct){
+            echo $key;      //商品名
+            echo "<br>";
+            echo $uProduct['number'];  //商品の個数
+            echo "<br>";
+            echo $uProduct['size']; //商品の金額
+            echo "<br>";
+        }
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -117,8 +167,8 @@
             </div>
           </div>
           <!-- form -->
-          <form method="POST" action="test.php">
-            <input class="sp_number" type="text" required="required" name="number">
+          <form method="POST" action="sp_cart.php">
+            <input class="sp_number" type="text" required="required" value="1" name="number">
 
             <div class="dt-text">
               <p>
@@ -130,7 +180,8 @@
       </div>
       <!-- /.sp-dt-maim -->
       <input type="hidden" name="size" value="" id="size2">
-      <input type="hidden" name="genre" value="2">
+      <!-- <input type="hidden" name="genre" value="2"> -->
+      <input type="hidden" name="cakeName" value="チーズケーキ -抹茶-">
       <button type="submit" class="btn-6 fadeUpTrigger" id="sub" onclick="return buy();">
         <span>購入する</span>
       </button>
