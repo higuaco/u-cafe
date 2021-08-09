@@ -173,11 +173,10 @@ $ticket = $_SESSION[ 'ticket' ];
       <img loading="lazy" class="main_con_i fadeUpTrigger" src="img/u-cafe-logo_black.png" alt="ロゴ黒">
       <p class="main_con_p fadeUpTrigger">You and Me Café</p>
       <div class="main_cons d-f jc-c fadeUpTrigger">
-        <div class="main_con_i_1"></div>
-        <div class="main_con_i_2"></div>
+        <img src="img/kari/footer.jpg" alt="">
       </div>
       <div class="btn-5 fadeUpTrigger">
-        <a href="contact.html">
+        <a href="contact.php">
           <div class="con_1 fadeUpTrigger">
             <h3>Contact</h3>
             <p class="con_2">U-cafeへのお問い合わせはこちらから</p>

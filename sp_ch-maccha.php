@@ -4,47 +4,48 @@
 // echo $genre;
 
 $cakeName = isset($_POST['cakeName'])? htmlspecialchars($_POST['cakeName'], ENT_QUOTES, 'utf-8') : '';
-echo $cakeName;
+// echo $cakeName;
 
 $size = isset($_POST['size'])? htmlspecialchars($_POST['size'], ENT_QUOTES, 'utf-8') : '';
-echo $size;
+// echo $size;
 
 $number = isset($_POST['number'])? htmlspecialchars($_POST['number'], ENT_QUOTES, 'utf-8') : '';
-echo $number;
+// echo $number;
 
 session_start();
-//もし、sessionにproductsがあったら
-  if(isset($_SESSION['uProducts'])){
-    //$_SESSION['products']を$productsという変数にいれる
-      $uProducts = $_SESSION['uProducts'];
-    //$productsをforeachで回し、キー(商品名)と値（金額・個数）取得
-      foreach($uProducts as $key => $uProduct){
-        //もし、キーとPOSTで受け取った商品名が一致したら、
-          if($key == $cakeName && $size == $uProduct['size']){
-            //既に商品がカートに入っているので、個数を足し算する
-              $number = (int)$number + (int)$uProduct['number'];
-          }
-      }
-  }
-    //配列に入れるには、$name,$count,$priceの値が取得できていることが前提なのでif文で空のデータを排除する
-  if($cakeName!=''&&$number!=''&&$size!=''){
-      $_SESSION['uProducts'][$cakeName]=[
-          'number' => $number,
-          'size' => $size
-      ];
-  }
-  $uProducts = isset($_SESSION['uProducts'])? $_SESSION['uProducts']:[];
 
-  if(isset($uProducts)){
-        foreach($uProducts as $key => $uProduct){
-            echo $key;      //商品名
-            echo "<br>";
-            echo $uProduct['number'];  //商品の個数
-            echo "<br>";
-            echo $uProduct['size']; //商品の金額
-            echo "<br>";
-        }
-    }
+//もし、sessionにproductsがあったら
+if(isset($_SESSION['uProducts'])){
+//$_SESSION['products']を$productsという変数にいれる
+$uProducts = $_SESSION['uProducts'];
+//$productsをforeachで回し、キー(商品名)と値（金額・個数）取得
+foreach($uProducts as $key => $uProduct){
+//もし、キーとPOSTで受け取った商品名が一致したら、
+if($key == $cakeName && $size == $uProduct['size']){
+//既に商品がカートに入っているので、個数を足し算する
+$number = (int)$number + (int)$uProduct['number'];
+}
+}
+}
+//配列に入れるには、$name,$count,$priceの値が取得できていることが前提なのでif文で空のデータを排除する
+if($cakeName!=''&&$number!=''&&$size!=''){
+$_SESSION['uProducts'][$cakeName]=[
+'number' => $number,
+'size' => $size
+];
+}
+$uProducts = isset($_SESSION['uProducts'])? $_SESSION['uProducts']:[];
+
+// if(isset($uProducts)){
+// foreach($uProducts as $key => $uProduct){
+// echo $key; //商品名
+// echo "<br>";
+// echo $uProduct['number']; //商品の個数
+// echo "<br>";
+// echo $uProduct['size']; //商品の金額
+// echo "<br>";
+// }
+// }
 
 
 ?>
@@ -89,7 +90,7 @@ session_start();
               <li><a class="hov_nav_b" href="photo.html">PHOTO</a></li>
               <li><a class="hov_nav_b" href="shop.html">ONLINE SHOP</a></li>
               <li><a class="hov_nav_b" href="index.html#access">ACCESS</a></li>
-              <li><a class="hov_nav_b" href="contact.html">CONTACT</a></li>
+              <li><a class="hov_nav_b" href="contact.php">CONTACT</a></li>
               <li><a href="https://www.instagram.com/u_cafe_201710/?hl=ja" target="_blank"><img
                     src="img/glyph-logo_May2016.png" alt="黒"><img class="insta_hov" src="img/insta_color.png"
                     alt="カラー "></a></li>
@@ -111,14 +112,14 @@ session_start();
       <div class="sp-dt-main d-f js-sb">
         <div class="sp-dt-sub1 fadeUpTrigger">
           <ul class="gallery2">
-            <li><img src="img/kari/cake3-1.jpg" alt="チーズケーキの写真"></li>
-            <li><img src="img/kari/cake3-2.jpg" alt="チーズケーキの写真"></li>
-            <li><img src="img/kari/cake3-3.jpg" alt="チーズケーキの写真"></li>
+            <li><img src="img/kari/m1.jpg" alt="チーズケーキの写真"></li>
+            <li><img src="img/kari/m2.jpg" alt="チーズケーキの写真"></li>
+            <li><img src="img/kari/m3.jpg" alt="チーズケーキの写真"></li>
           </ul>
           <ul class="choice-btn">
-            <li><img src="img/kari/cake3-1.jpg" alt="チーズケーキの写真"></li>
-            <li><img src="img/kari/cake3-2.jpg" alt="チーズケーキの写真"></li>
-            <li><img src="img/kari/cake3-3.jpg" alt="チーズケーキの写真"></li>
+            <li><img src="img/kari/m1.jpg" alt="チーズケーキの写真"></li>
+            <li><img src="img/kari/m2.jpg" alt="チーズケーキの写真"></li>
+            <li><img src="img/kari/m3.jpg" alt="チーズケーキの写真"></li>
           </ul>
         </div>
         <!-- /.sp-dt-sub1 -->
@@ -167,7 +168,7 @@ session_start();
             </div>
           </div>
           <!-- form -->
-          <form method="POST" action="sp_cart.php">
+          <form method="POST">
             <input class="sp_number" type="text" required="required" value="1" name="number">
 
             <div class="dt-text">
@@ -183,7 +184,11 @@ session_start();
       <!-- <input type="hidden" name="genre" value="2"> -->
       <input type="hidden" name="cakeName" value="チーズケーキ -抹茶-">
       <button type="submit" class="btn-6 fadeUpTrigger" id="sub" onclick="return buy();">
-        <span>購入する</span>
+        <span>カートに入れる</span>
+      </button>
+      <button type="button" class="btn-6 d-ib" onclick="location.href='cart.php'"
+        <?php if(empty($uProducts)) echo 'disabled="disabled"'; ?>>
+        <span>カートを見る</span>
       </button>
       </form>
 
@@ -195,13 +200,12 @@ session_start();
     <!-- footer -->
     <div class="main_contact">
       <img loading="lazy" class="main_con_i fadeUpTrigger" src="img/u-cafe-logo_black.png" alt="ロゴ黒">
-      <p class="main_con_p fadeUpTrigger">You and Me Cafe</p>
+      <p class="main_con_p fadeUpTrigger">You and Me Café</p>
       <div class="main_cons d-f jc-c fadeUpTrigger">
-        <div class="main_con_i_1"></div>
-        <div class="main_con_i_2"></div>
+        <img src="img/kari/footer.jpg" alt="">
       </div>
       <div class="btn-5 fadeUpTrigger">
-        <a href="contact.html">
+        <a href="contact.php">
           <div class="con_1 fadeUpTrigger">
             <h3>Contact</h3>
             <p class="con_2">U-cafeへのお問い合わせはこちらから</p>
