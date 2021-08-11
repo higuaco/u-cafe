@@ -24,10 +24,10 @@ img {
 
 body {
   color: #333;
+  width: 100%;
   font-family: 'PT Sans Caption','PT Sans','ヒラギノ角ゴ Pro W3',' Hiragino Kaku Gothic Pro', 'MeiryoUI', 'MSUIGothic', 'メイリオ', 'Meiryo', 'ＭＳＰゴシック', sans-serif;
   line-height: 1.8;
   letter-spacing: 0.2rem;
-  max-width: 1920px;
   text-align: center;
   margin: 0 auto;
   overflow: auto;
@@ -99,6 +99,11 @@ header .header_under {
 
 header .header_under_indx {
   border-bottom: 1px solid #fff;
+}
+
+/* スマホ用メニューを非表示 */
+.sp-menu {
+  display: none;
 }
 
 .nav {
@@ -185,30 +190,6 @@ header .header_under_indx {
   letter-spacing: .8rem;
   font-size: 2rem;
   margin-bottom: 100px;
-}
-
-.main_cons {
-  text-align: center;
-}
-
-.main_con_i_1 {
-  width: 960px;
-  height: 553px;
-  background-image: url(../img/kari/coffee.jpg);
-  background-size: cover;
-  background-position: center bottom 23%;
-}
-
-.main_con_i_2 {
-  width: 960px;
-  height: 553px;
-  background-image: url(../img/kari/cakea.jpg);
-  background-size: cover;
-  background-position: center bottom 30%;
-}
-
-.clear {
-  clear: both;
 }
 
 .con_3 {
@@ -808,6 +789,10 @@ footer {
   margin-top: 50px;
 }
 
+.mt_15 {
+  margin-top: 15px;
+}
+
 .ml_10 {
   margin-left: 10px;
 }
@@ -895,6 +880,55 @@ button {
   body {
     background-color: #00FFFF;
     /*青色*/
+  }
+  .pc-menu {
+    display: none;
+  }
+  /* スマホ用メニュー表示 */
+  .sp-menu {
+    margin: 0 auto;
+    width: 90%;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    background: rgba(76, 88, 111, 0.8);
+    left: 0;
+  }
+  .sp-menu ul li {
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* メニューボタン */
+  .toggle {
+    display: block;
+    width: 35px;
+    height: 30px;
+    position: relative;
+    top: 18px;
+    z-index: 2;
+    float: right;
+  }
+  .toggle:hover {
+    cursor: pointer;
+  }
+  .toggle span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  .toggle span:nth-child(1) {
+    top: 0px;
+  }
+  .toggle span:nth-child(2) {
+    top: 12px;
+  }
+  .toggle span:nth-child(3) {
+    top: 24px;
   }
 }
 

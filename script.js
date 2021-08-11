@@ -166,3 +166,11 @@ jQuery(function($){
     }
   });
 })
+
+//ハンバーガーメニュー
+$(function(){
+    $('.toggle').click(function(){
+        $("header").toggleClass('open');
+        $(".sp-menu").slideToggle(500);
+    });
+});

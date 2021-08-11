@@ -112,14 +112,14 @@ $uProducts = isset($_SESSION['uProducts'])? $_SESSION['uProducts']:[];
       <div class="sp-dt-main d-f js-sb">
         <div class="sp-dt-sub1 fadeUpTrigger">
           <ul class="gallery2">
-            <li><img src="img/kari/m1.jpg" alt="チーズケーキの写真"></li>
-            <li><img src="img/kari/m2.jpg" alt="チーズケーキの写真"></li>
-            <li><img src="img/kari/m3.jpg" alt="チーズケーキの写真"></li>
+            <li><img src="img/kari/k1.jpg" alt="クッキー1"></li>
+            <li><img src="img/kari/k2.jpg" alt="クッキー2"></li>
+            <li><img src="img/kari/k3.jpg" alt="クッキー3"></li>
           </ul>
           <ul class="choice-btn">
-            <li><img src="img/kari/m1.jpg" alt="チーズケーキの写真"></li>
-            <li><img src="img/kari/m2.jpg" alt="チーズケーキの写真"></li>
-            <li><img src="img/kari/m3.jpg" alt="チーズケーキの写真"></li>
+            <li><img src="img/kari/k1.jpg" alt="クッキー1"></li>
+            <li><img src="img/kari/k2.jpg" alt="クッキー2"></li>
+            <li><img src="img/kari/k3.jpg" alt="クッキー3"></li>
           </ul>
         </div>
         <!-- /.sp-dt-sub1 -->
@@ -128,69 +128,44 @@ $uProducts = isset($_SESSION['uProducts'])? $_SESSION['uProducts']:[];
           <p class="sp-dt-name2">クッキー -ギフト仕様-</p>
           <!-- Price Section -->
           <div class="dt-price d-f">
-            <p>価格：</p>
+            <p>価格：要お問合せ</p>
             <!-- Section -->
-            <div class="c-m_s section">
-              <p>1,000円（税込）</p>
-            </div>
-            <div class="c-m_m section">
-              <p>2,000円（税込）</p>
-            </div>
-            <div class="c-m_l section">
-              <p>3,000円（税込）</p>
-            </div>
+
           </div>
 
           <div class="dt-size d-f">
             <div class="dt-size-ti">
               <p>SIZE</p>
             </div>
-            <div class="dt-size-po">
-              <p>&#92;&nbsp;一番人気&nbsp;/</p>
-            </div>
+
           </div>
           <div class="dt-size-dt d-f">
             <!-- List -->
             <div>
-              <button id="c-m_s" class="secList dt-size" value="12cm" name="size" onclick="buy_s();">12cm</button>
+              <div id="c-m_s" class="dt-size">small</div>
             </div>
             <div>
-              <button id="c-m_m" class="secList dt-size" value="15cm" name="size" onclick="buy_m();">15cm</button>
-            </div>
-            <div>
-              <button id="c-m_l" class="secList dt-size" value="18cm" name="size" onclick="buy_l();">18cm</button>
+              <div id="c-m_m" class="dt-size">&nbsp;large</div>
             </div>
           </div>
 
-          <div class="dt-size d-f">
-            <div class="dt-size-ti">
-              <p>個数</p>
-            </div>
-          </div>
           <!-- form -->
           <form method="POST">
-            <input class="sp_number" type="text" required="required" value="1" name="number">
 
             <div class="dt-text">
               <p>
-                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス
+                内祝いや、引越し祝い、またちょっとしたイベント用のギフトクッキーです。<br>
+                こどもの日や、母の日、父の日など、そのイベントに型どったクッキーをお作りします。<br>
+                ギフトクッキーは下記のボタンをクリックしてお問合せください。
               </p>
             </div>
+            <a href="contact.php">
+              <div class="btn-6 mt_15 ta-c"><span>クッキーのお問合せはこちら</span></div>
+            </a>
         </div>
         <!-- /.sp-dt-sub2 -->
       </div>
-      <!-- /.sp-dt-maim -->
-      <input type="hidden" name="size" value="" id="size2">
-      <!-- <input type="hidden" name="genre" value="2"> -->
-      <input type="hidden" name="cakeName" value="チーズケーキ -抹茶-">
-      <button type="submit" class="btn-6 fadeUpTrigger" id="sub" onclick="return buy();">
-        <span>カートに入れる</span>
-      </button>
-      <button type="button" class="btn-6 d-ib" onclick="location.href='cart.php'"
-        <?php if(empty($uProducts)) echo 'disabled="disabled"'; ?>>
-        <span>カートを見る</span>
-      </button>
-      </form>
+
 
       <div class="btn-7 fadeUpTrigger">
         <a href="shop.html">戻る</a>
@@ -223,7 +198,7 @@ $uProducts = isset($_SESSION['uProducts'])? $_SESSION['uProducts']:[];
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="script.js"></script>
-  <script>
+  <!-- <script>
   function buy_s() {
     var s = document.getElementById('c-m_s');
     var m = document.getElementById('c-m_m');
@@ -279,7 +254,7 @@ $uProducts = isset($_SESSION['uProducts'])? $_SESSION['uProducts']:[];
     }
 
   }
-  </script>
+  </script> -->
 </body>
 
 </html>
