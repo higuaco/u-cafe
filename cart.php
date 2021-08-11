@@ -104,7 +104,7 @@
     </div>
     <div class="inner">
 
-      <div class="cartlist">
+      <div class="cartlist mt_50">
         <table class="cart-table">
           <thead>
             <tr>
@@ -118,7 +118,7 @@
           <tbody>
             <?php foreach($uProducts as $cakeName => $uProduct): ?>
             <tr>
-              <td label="商品名："><?php echo $cakeName; ?>　　<?php echo $uProduct['size']; ?></td>
+              <td class="ta-l" label="商品名："><?php echo $cakeName; ?>　　<?php echo $uProduct['size']; ?></td>
               <td label="価格：" class="text-right">&yen;<?php echo $price; ?></td>
               <td label="個数：" class="text-right"><?php echo $uProduct['number']; ?></td>
               <td label="小計：" class="text-right">&yen;<?php echo $subtotal; ?></td>
@@ -135,7 +135,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="cart-btn">
+        <div class="cart-btn mt_50">
           <button type="button" class="btn btn-blue" onclick="location.href='pay.php'"
             <?php if(empty($uProducts)) echo 'disabled="disabled"'; ?>>購入手続きへ</button>
           <button type="button" class="btn btn-gray" onclick="location.href='shop.html'">お買い物を続ける</button>
@@ -146,7 +146,7 @@
 
     </div>
   </main>
-  <footer class="fadeUpTrigger">
+  <footer class="fadeUpTrigger mt_100">
     <small>Copyright &copy Sheepontaneous,All rights reserved.</small>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

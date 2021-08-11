@@ -188,7 +188,7 @@ $uProducts = isset($_SESSION['uProducts'])? $_SESSION['uProducts']:[];
       <button type="submit" class="btn-6 fadeUpTrigger" id="sub" onclick="return buy();">
         <span>カートに入れる</span>
       </button>
-      <button type="button" class="btn-6 d-ib" onclick="location.href='cart.php'"
+      <button type="button" class="btn-6 d-ib fadeUpTrigger" onclick="location.href='cart.php'"
         <?php if(empty($uProducts)) echo 'disabled="disabled"'; ?>>
         <span>カートを見る</span>
       </button>
