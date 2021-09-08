@@ -83,24 +83,35 @@ header {
     border-bottom: 1px solid #333;
     height: 90px;
   }
-  .header_under_indx {
-    border-bottom: 1px solid #fff;
-  }
+
 }
 /* スマホ用メニューを非表示 */
 .sp-menu {
     display: none;
 }
 .nav {
+  position: fixed;
+  z-index: 998;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 90px;
+  padding: 0 100px;
   img {
     width: 120px;
     height: auto;
   }
 }
+.bg_b {
+  background-color: rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.bg_w {
+  background-color: rgba(255, 255, 255, 0.493);
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
 // nav
 .nav_li {
   align-items: center;
@@ -133,7 +144,7 @@ header {
 -------------------------------*/
 .shop-ti-big {
   height: 68px;
-  margin-top: 20px;
+  margin-top: 120px;
   background-color: $ucafe-color;
   .shop-ti-big-p {
     font-size: 2rem;

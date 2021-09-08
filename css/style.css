@@ -84,8 +84,9 @@
 *	main about_us
 * * * * * * * * */
 #aboutus {
-  margin-top: 90px;
   padding: 0 20px;
+  padding-top: 90px;
+  padding-bottom: 200px;
 }
 
 #aboutus h2 {
@@ -148,25 +149,28 @@
 *	main news
 * * * * * * * * */
 #news {
+  padding-top: 100px;
+}
+
+.news {
   background-color: #F5F8F6;
-  margin-top: 200px;
   margin-left: 50px;
   margin-right: 50px;
   padding: 60px;
 }
 
-#news #news_a {
+.news #news_a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
 
-#news #news_a p {
+.news #news_a p {
   font-size: 1.6rem;
   letter-spacing: .38rem;
 }
 
-#news #news_a p span {
+.news #news_a p span {
   font-weight: bold;
   margin-right: 35px;
 }
@@ -227,7 +231,7 @@
 *	main Online shop
 * * * * * * * * */
 #online_s {
-  margin: 150px 0;
+  margin-top: 150px;
   padding-top: 30px;
   background-color: #F5F8F6;
 }
@@ -269,6 +273,7 @@
 *	main access
 * * * * * * * * */
 #access {
+  padding-top: 120px;
   margin-bottom: 200px;
   line-height: 2.3;
   font-size: 1.5rem;

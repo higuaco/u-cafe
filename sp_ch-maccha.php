@@ -75,30 +75,27 @@ $uProducts = isset($_SESSION['uProducts'])? $_SESSION['uProducts']:[];
 
 <body>
   <!-- headerー -->
-  <header class="header-photo">
-    <div class="header_under mb_50">
-      <div class="inner">
-        <!-- ヘッダーナビ -->
-        <div class="nav nav-border">
-          <h1><a class="hov" href="/"><img src="img/u-cafe-logo_black.png" alt="黒ロゴ。u-cafe.あなたとわたしのカフェ。| 熊本市東区"></a>
-          </h1>
-          <!-- ヘッダーナビ 項目部分 -->
-          <div class="nav_li">
-            <ul>
-              <li><a class="hov_nav_b" href="index.html#aboutus">ABOUT US</a></li>
-              <li><a class="hov_nav_b" href="index.html#news">NEWS</a></li>
-              <li><a class="hov_nav_b" href="photo.html">PHOTO</a></li>
-              <li><a class="hov_nav_b" href="shop.html">ONLINE SHOP</a></li>
-              <li><a class="hov_nav_b" href="index.html#access">ACCESS</a></li>
-              <li><a class="hov_nav_b" href="contact.php">CONTACT</a></li>
-              <li><a href="https://www.instagram.com/u_cafe_201710/?hl=ja" target="_blank"><img
-                    src="img/glyph-logo_May2016.png" alt="黒"><img class="insta_hov" src="img/insta_color.png"
-                    alt="カラー "></a></li>
-            </ul>
-          </div>
+  <header>
+    <div class="header_under_index header_under_index-bk mb_50">
+      <!-- nav -->
+      <div class="nav bg_w">
+        <h1><a class="hov" href="/"><img src="img/u-cafe-logo_black.png" alt="黒ロゴ。u-cafe.あなたとわたしのカフェ。| 熊本市東区"></a></h1>
+        <!-- ヘッダーナビ 項目部分 -->
+        <div class="nav_li">
+          <ul>
+            <li><a class="hov_nav_b" href="index.html#aboutus">ABOUT US</a></li>
+            <li><a class="hov_nav_b" href="index.html#news">NEWS</a></li>
+            <li><a class="hov_nav_b" href="photo.html">PHOTO</a></li>
+            <li><a class="hov_nav_b" href="shop.html">ONLINE SHOP</a></li>
+            <li><a class="hov_nav_b" href="index.html#access">ACCESS</a></li>
+            <li><a class="hov_nav_b" href="contact.php">CONTACT</a></li>
+            <li><a href="https://www.instagram.com/u_cafe_201710/?hl=ja" target="_blank"><img
+                  src="img/glyph-logo_May2016.png" alt="黒"><img class="insta_hov" src="img/insta_color.png"
+                  alt="カラー "></a></li>
+          </ul>
         </div>
       </div>
-      <!-- .inner div -->
+
     </div>
   </header>
   <main>
@@ -145,9 +142,9 @@ $uProducts = isset($_SESSION['uProducts'])? $_SESSION['uProducts']:[];
             <div class="dt-size-ti">
               <p>SIZE</p>
             </div>
-            <div class="dt-size-po">
+            <!-- <div class="dt-size-po">
               <p>&#92;&nbsp;一番人気&nbsp;/</p>
-            </div>
+            </div> -->
           </div>
           <div class="dt-size-dt d-f">
             <!-- List -->

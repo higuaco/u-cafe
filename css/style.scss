@@ -58,7 +58,6 @@ transform: translateY(0);
 .head-bg-img {
   width: 100%;
   height: 700px;
-  // background: linear-gradient(rgba(99, 98, 98, 0.2), rgba(0, 0, 0, 0.2)), url(../img/kari/header.jpg);
   background-image: url(../img/kari/header.jpg);
   background-size: cover;
 }
@@ -69,8 +68,9 @@ transform: translateY(0);
 *	main about_us
 * * * * * * * * */
 #aboutus {
-  margin-top: 90px;
   padding: 0 20px;
+  padding-top: 90px;
+  padding-bottom: 200px;
   h2 {
     margin-bottom: 20px;
   }
@@ -117,8 +117,10 @@ transform: translateY(0);
 *	main news
 * * * * * * * * */
 #news {
+  padding-top: 100px;
+}
+.news {
   background-color: $ucafe-color;
-  margin-top: 200px;
   margin-left: 50px;
   margin-right: 50px;
   padding: 60px;
@@ -175,7 +177,7 @@ transform: translateY(0);
 *	main Online shop
 * * * * * * * * */
 #online_s {
-  margin: 150px 0;
+  margin-top: 150px;
   padding-top: 30px;
   background-color: $ucafe-color;
   .i-pp {
@@ -206,6 +208,7 @@ transform: translateY(0);
 * * * * * * * * */
 
 #access {
+  padding-top: 120px;
   margin-bottom: 200px;
   line-height: 2.3;
   font-size: 1.5rem;
